@@ -1,0 +1,11 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x   30 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco         73 Mar  1  2019 data-eu-gdp-growth-1.json
+-rw-r--r--    1 sandiegoco sandiegoco         99 Mar  1  2019 data-eu-gdp-growth-2.json
+-rw-r--r--    1 sandiegoco sandiegoco        125 Mar  1  2019 data-eu-gdp-growth-3.json
+-rw-r--r--    1 sandiegoco sandiegoco        151 Mar  1  2019 data-eu-gdp-growth-4.json
+-rw-r--r--    1 sandiegoco sandiegoco        177 Mar  1  2019 data-eu-gdp-growth-5.json
+-rw-r--r--    1 sandiegoco sandiegoco        177 Mar  1  2019 data-eu-gdp-growth.json
+-rw-r--r--    1 sandiegoco sandiegoco        171 Mar  1  2019 data-japan-gdp-growth.json
+-rw-r--r--    1 sandiegoco sandiegoco        167 Mar  1  2019 data-usa-gdp-growth.json
+-rw-r--r--    1 sandiegoco sandiegoco       4333 Mar  1  2019 index.html

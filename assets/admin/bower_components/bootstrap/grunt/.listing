@@ -1,0 +1,11 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    8 sandiegoco sandiegoco       4096 Feb 26  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco        119 Mar  1  2019 .jshintrc
+-rw-r--r--    1 sandiegoco sandiegoco        990 Mar  1  2019 bs-commonjs-generator.js
+-rw-r--r--    1 sandiegoco sandiegoco       1405 Mar  1  2019 bs-glyphicons-data-generator.js
+-rw-r--r--    1 sandiegoco sandiegoco       6075 Mar  1  2019 bs-lessdoc-parser.js
+-rw-r--r--    1 sandiegoco sandiegoco       1349 Mar  1  2019 bs-raw-files-generator.js
+-rw-r--r--    1 sandiegoco sandiegoco       2909 Mar  1  2019 change-version.js
+-rw-r--r--    1 sandiegoco sandiegoco       1395 Mar  1  2019 configBridge.json
+-rw-r--r--    1 sandiegoco sandiegoco      93626 Mar  1  2019 npm-shrinkwrap.json
+-rw-r--r--    1 sandiegoco sandiegoco       1439 Mar  1  2019 sauce_browsers.yml

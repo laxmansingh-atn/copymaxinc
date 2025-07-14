@@ -1,0 +1,16 @@
+drwxr-xr-x    7 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 compat
+-rw-r--r--    1 sandiegoco sandiegoco      15407 Mar  1  2019 core.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 data
+-rw-r--r--    1 sandiegoco sandiegoco      10608 Mar  1  2019 defaults.js
+-rw-r--r--    1 sandiegoco sandiegoco      16165 Mar  1  2019 diacritics.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 dropdown
+-rw-r--r--    1 sandiegoco sandiegoco        902 Mar  1  2019 dropdown.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 i18n
+-rw-r--r--    1 sandiegoco sandiegoco        315 Mar  1  2019 keys.js
+-rw-r--r--    1 sandiegoco sandiegoco       3254 Mar  1  2019 options.js
+-rw-r--r--    1 sandiegoco sandiegoco      12934 Mar  1  2019 results.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 selection
+-rw-r--r--    1 sandiegoco sandiegoco        717 Mar  1  2019 translation.js
+-rw-r--r--    1 sandiegoco sandiegoco       6678 Mar  1  2019 utils.js

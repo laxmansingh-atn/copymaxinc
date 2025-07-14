@@ -1,0 +1,9 @@
+<?php
+
+$this->load->view($this->config->item('bootsshop_template_dir_welcome') . 'header');
+//$this->load->view($this->config->item('bootsshop_template_dir_welcome') . 'left_home');
+//$this->load->view($this->config->item('bootsshop_template_dir_welcome') . 'right_home');
+$this->load->view($this->config->item('bootsshop_template_dir_welcome') . 'content');
+$this->load->view($this->config->item('bootsshop_template_dir_welcome') . 'footer');
+
+?>

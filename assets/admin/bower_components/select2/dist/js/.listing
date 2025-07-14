@@ -1,0 +1,7 @@
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 i18n
+-rw-r--r--    1 sandiegoco sandiegoco     162664 Mar  1  2019 select2.full.js
+-rw-r--r--    1 sandiegoco sandiegoco      74920 Mar  1  2019 select2.full.min.js
+-rw-r--r--    1 sandiegoco sandiegoco     142766 Mar  1  2019 select2.js
+-rw-r--r--    1 sandiegoco sandiegoco      66604 Mar  1  2019 select2.min.js

@@ -1,0 +1,1236 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Index extends MY_Controller
+{
+    
+    //protected $lang;
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->library('encryption');
+        $this->load->model('home_model');
+        $this->load->model('product_model');
+        if ($this->session->userdata('site_lang') == "") {
+            $a_lang     = $this->config->item('lang_uri_abbr');
+            $lang_code  = $this->uri->segment(1);
+            $lang_value = "english";
+            if (array_key_exists($lang_code, $a_lang)) {
+                $lang_value = $a_lang[$lang_code];
+            }
+            $this->session->set_userdata('site_lang', $lang_value);
+        } else {
+            $a_lang    = $this->config->item('lang_uri_abbr');
+            $lang_code = $this->uri->segment(1);
+            if (array_key_exists($lang_code, $a_lang)) {
+                $lang_value = $a_lang[$lang_code];
+            }
+        }
+    }
+    
+    //Home Page
+    public function index()
+    {
+        $this->_container       = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules         = $this->config->item('modules_locations');
+        $data                   = array();
+        $data['page_slug']      = end($this->uri->segments);
+        $data['productlist']    = $this->product_model->Show_Products();
+        $data['category_lists'] = $this->home_model->Show_Category(); //category  list
+        $data['page_title']     = "Home";
+        $data['page']           = $this->config->item('bootsshop_template_dir_welcome') . "index";
+        $data['module']         = 'welcome';
+        $this->load->view($this->_container, $data);
+    }
+    
+    public function product_details()
+    {
+        $this->_container           = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $slug                       = end($this->uri->segments);
+        $data['get_data']           = $this->home_model->product_printing_details($slug);
+        $data['get_finishing_data'] = $this->home_model->product_finishing_details($slug);
+        $data['product_data']       = $this->home_model->product_details_main($slug);
+        //$data['price']              = $this->home_model->get_price();
+        //echo "<pre>";print_r($data['price']);die();
+        $data['page_title'] = "Home";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "product_details";
+        $data['module']     = 'welcome';
+        //print_r($data); die;
+        $this->load->view($this->_container, $data);
+        
+    }
+    
+    /********************   attribute price calculator  *******************/
+    // 12-12-18    
+
+    public function price_calculator()
+    {
+        if ($this->input->post()) {
+            //print_r($this->input->post());die();
+            $dimensions = $this->input->post('dimensions');
+            $paper_type = $this->input->post('paper_type');
+            $no_of_sides = $this->input->post('no_of_sides');
+            $product_id = $this->input->post('product_id');
+            $no_copies = $this->input->post('no_copies');
+            $no_pages = $this->input->post('no_pages');
+            $divider_sheets = $this->input->post('divider_sheets');
+            $stapling = $this->input->post('stapling');
+            $folding = $this->input->post('folding');
+            $collation = $this->input->post('collation');
+            $hole_punch = $this->input->post('hole_punch');
+
+            $total_paper_price = $error = $finishing = $divider_sheets_price['price'] = $stapling_price['price'] = $folding_price['price'] = $hole_punch_price['price'] = 0;
+
+            $total_pages = $no_copies * $no_pages;
+
+            if ($no_of_sides == "2-sided") {
+                if ($no_pages%2 == 0) {
+                    $printing = $this->home_model->get_printing_price($dimensions,$no_of_sides,$product_id,$total_pages);
+                    $printing_per_page = $printing['price'];
+                    $total_printing = $printing_per_page * $total_pages;
+                } else {
+                    $even_pages = ($no_pages - 1)*$no_copies;
+                    $even = $this->home_model->get_printing_price($dimensions,"2-sided",$product_id,$even_pages);
+
+                    $odd_pages = 1*$no_copies;
+                    $odd = $this->home_model->get_printing_price($dimensions,"1-sided",$product_id,$odd_pages);
+
+                    $printing_per_page = $even['price']+$odd['price'];
+                    $total_printing = ($even['price'] * $even_pages)+($odd['price'] * $odd_pages);
+                }
+            } else {
+                $printing = $this->home_model->get_printing_price($dimensions,$no_of_sides,$product_id,$total_pages);
+                $printing_per_page = $printing['price'];
+                $total_printing = $printing_per_page * $total_pages;
+            }
+            
+
+            
+            //echo $total_printing;die();
+
+            if ($paper_type == "20/50 lb white copy paper") {
+                $paper_price = 0;
+            } else {
+                $price = $this->home_model->get_paper_price($paper_type,$product_id,$dimensions);
+                if (empty($price)) {
+                    $paper_price = 0;
+                    $error = 1;
+                } else {
+                    $paper_price = $price['price'];
+                    if ($no_of_sides == "2-sided") {
+                        if ($no_pages%2 == 0) {
+                            $total_pages = ($no_copies * $no_pages)/2;
+                            $total_paper_price = $paper_price * $total_pages;
+                        } else {
+                            $even_colour_page = $no_pages - 1;
+                            $total_even_colour_pages = ($no_copies * $even_colour_page)/2;
+                            $total_even_paper_price = $paper_price * $total_even_colour_pages;
+
+                            $odd_colour_page = 1;
+                            $total_odd_colour_pages = $no_copies * $odd_colour_page;
+                            $total_odd_paper_price = $paper_price * $total_odd_colour_pages;
+
+                            $total_paper_price = $total_even_paper_price + $total_odd_paper_price;
+                        }
+                    } else {
+                        $total_pages = $no_copies * $no_pages;
+                        $total_paper_price = $paper_price * $total_pages;
+                    }
+                }
+            }
+
+            //finishing option
+
+            if (!empty($divider_sheets)) {
+                $condition = array('attr_type'=>'divider','product_id'=>$product_id);
+                $divider_sheets_price = $this->home_model->get_finishing_price($condition);
+                if (empty($divider_sheets_price['price'])) {
+                    $error = 1;
+                }
+            }
+
+            if (!empty($stapling)) {
+                $condition = array('product_id'=>$product_id,'attr_type'=>'stapling',$no_pages.' between range_from and `range_to`'=> NULL,'dimension'=>$dimensions,'page_side'=>$no_of_sides,'stapling_type'=>$stapling,'folding_paper_type'=>$collation);
+                //print_r($condition);die();
+                $stapling_price = $this->home_model->get_finishing_price($condition);
+                if (empty($stapling_price['price'])) {
+                    $error = 1;
+                }
+            }
+
+            if (!empty($folding)) {
+                $condition = array('product_id'=>$product_id,'attr_type'=>'folding','folding_paper_type'=>$collation);
+                $folding_price = $this->home_model->get_finishing_price($condition);
+                if (empty($folding_price['price'])) {
+                    $error = 1;
+                }
+            }
+
+            if (!empty($hole_punch)) {
+                $condition = array('product_id'=>$product_id,'attr_type'=>'hole','dimension'=>$dimensions,'page_side'=>$no_of_sides);
+                $hole_punch_price = $this->home_model->get_finishing_price($condition);
+                if (empty($hole_punch_price['price'])) {
+                    $error = 1;
+                }
+            }
+
+            if (empty($folding_price['price'])) {
+                $total_folding_price = 0;
+            } else {
+                if (($folding_price['price']* $total_pages) < 10) {
+                    $total_folding_price = 10;
+                } else {
+                    $total_folding_price = $folding_price['price']* $total_pages;
+                }
+            }
+
+            $finishing = $divider_sheets_price['price'] + $stapling_price['price'] + $total_folding_price + $hole_punch_price['price'];
+
+            $price_per_page  = ($printing_per_page + $finishing)+$paper_price+$total_folding_price;
+
+            $finishing_total = ($divider_sheets_price['price'] * $no_copies) + ($stapling_price['price'] * $no_copies) + ($hole_punch_price['price']*$total_pages);
+            
+            $total  = ($total_printing) + ($finishing_total);
+
+            $total_price = $total + $total_paper_price;
+
+            if ($total_price < 25) {
+                $total_price = "25.00"+ $total_folding_price;
+            } else {
+                $total_price = $total + $total_paper_price + $total_folding_price;
+            }
+            
+            echo json_encode(array(
+                'price' => $price_per_page,
+                'total' => $total_price,
+                'error' => $error
+            ));
+            die();
+        }
+    }
+
+    public function get_cart_item()
+    {
+        if ($this->input->post()) {
+            $data['rowid'] = $this->input->post('rowid');
+            $this->load->view('ajax/ajax_cart_item',$data);
+        }
+    }
+    
+    
+    public function image_upload()
+    {
+        
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $slug             = end($this->uri->segments);
+        
+        // $details = $this->session->userdata('product_details');
+        if ($this->input->post()) {
+            $details = $this->input->post();
+        }
+        // print_r($details) ;  exit() ; 
+        //print_r($this->input->post());
+        $data['details']    = $details;
+        $data['page_title'] = "Home";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "product_file_upload";
+        $data['module']     = 'welcome';
+        //print_r($data); die;
+        $this->load->view($this->_container, $data);
+        
+    }
+    public function contact_us()
+    {
+        //echo get_current_language(); die;
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data                 = array();
+        $page_slug            = 'contact-us';
+        $data['page_slug']    = $page_slug;
+        $data['page_content'] = $this->home_model->Show_Page_Content($page_slug, get_current_language());
+        
+        //print_r($data['page_content']);
+        
+        $data['page_title'] = "Contact Us";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "contactus";
+        $data['module']     = 'welcome';
+        
+        //echo "<pre>";print_r($data['content']);exit();
+        
+        $this->load->view($this->_container, $data);
+    }
+    //CMS Page(s)
+    public function cms_page()
+    {
+        //echo get_current_language(); 
+        # Get the third segment
+        $page_slug        = end($this->uri->segments);
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data                 = array();
+        $data['page_slug']    = $page_slug;
+        $data['page_content'] = $this->home_model->Show_Page_Content($page_slug, get_current_language());
+        
+        
+        $data['page_title'] = $page_slug;
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "cms";
+        $data['module']     = 'welcome';
+        
+        //echo "<pre>";print_r($data['page_content']);exit();
+        
+        $this->load->view($this->_container, $data);
+    }
+    //Our Products Page
+    public function products_listing()
+    {
+        $this->_container       = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules         = $this->config->item('modules_locations');
+        $data                   = array();
+        $data['page_slug']      = end($this->uri->segments);
+        //$data['header_content']  = $this->home_model->Show_Page(get_current_language());        
+        //$data['banner_list']    = $this->home_model->Show_Banner('home',get_current_language() );     //banner list
+        //$data['brand_list']    = $this->home_model->Show_Brands(get_current_language());     //brands list
+        $data['category_lists'] = $this->home_model->Show_Category(); //category  list
+        $data['productlist']    = $this->product_model->Show_Products();
+        //print_r($data['productlist']); die;
+        $data['page_title']     = "Home";
+        $data['page']           = $this->config->item('bootsshop_template_dir_welcome') . "products";
+        $data['module']         = 'welcome';
+        //print_r($data); die;
+        $this->load->view($this->_container, $data);
+    }
+    // Contact us submit
+    // Contact us submit
+    public function contact_us_add()
+    {
+        $segments  = $this->uri->total_segments();
+        $lang_code = get_current_language(); // Helper "current_language_helper.php"
+        if (isset($_POST['submit'])) {
+            //print_r($_POST);  die;
+            $this->form_validation->set_rules('email', 'Email', 'trim|required');
+            $this->form_validation->set_rules('subject', 'Subject', 'trim|required');
+            
+            //print_r($data);
+            $insert_data = array(
+                'first_name' => $this->input->post('first_name'),
+                'last_name' => $this->input->post('last_name'),
+                'email' => $this->input->post('email'),
+                'phone_no' => $this->input->post('phone_no'),
+                'subject' => $this->input->post('subject'),
+                'message' => $this->input->post('message'),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            );
+            $this->db->insert('tbl_contact_us', $insert_data);
+            ## Mail to Customer############### 
+            $name  = $this->input->post('first_name');
+            $phone = $this->input->post('phone_no');
+            $email = $this->input->post('email');
+            $mesg  = $this->input->post('message');
+            
+            $message = '<body style="padding: 0;margin: 0;background-color: #fff;font-family: "Open Sans", sans-serif;">
+                          <table width="100%" align="center">
+                           <tbody>
+                        <tr>
+                        <td>
+                        <table style="width: 600px; margin: 35px auto;" align="center">
+                        <tbody>
+                        <tr>
+                        <td style="color: #000;">
+
+                        <table style="border-top: 10px solid #d6d9d8;border-left: 10px solid #d6d9d8;border-right: 10px solid #d6d9d8;width: 100%;">
+                        <tbody>
+                        <tr>
+                        <td>
+                        <div style="text-align:center;padding: 45px 0 0 0;">
+                            <img src="' . base_url() . 'assets/frontend/images/logo.png" alt="logo">
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;color: #045393;font-size: 15px;font-weight: 600;padding: 10px 0;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,sans-serif">
+                        <p><b>We’re pleased to meet you</b><span style="color: #000;"> ' . $name . '</span></p>
+                        
+
+                        <div style="width: 160px;margin: 3px auto 15px auto;height: 1px; background-color: #d1d1d1;"></div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <div style="margin: 0 45px;font-family:Arial !important;font-size: 18px">
+                        <pre style="color: #000;font-size: 16px;line-height: 22px;margin: 0 0 20px 0;font-family:Lucida Grande,Lucida Sans Unicode,Lucida Sans,DejaVu Sans,Verdana,sans-serif;">
+                          Thank You for contacting us. will get back to you soon</p>
+
+                        </pre>
+                        </div>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                        <table  style="background-color: #313232;width: 100%;text-align: center;color: #fff;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,sans-serif;font-size: 13px;padding: 17px 0;">
+                        <tr>
+                        <td>
+                        2018 San Diego copy company. since 2018
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        ©2018 San Diego copy company. All rights reserved.
+                        </td>
+                        </tr>
+                        </table>
+
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </td>
+                        </tr>
+                        </tbody>
+                   </table></body>';
+            
+            $config['protocol']   = 'smtp';
+            $config['smtp_host']  = 'mail.met-technologies.com';
+            $config['smtp_port']  = '25';
+            $config['smtp_user']  = 'developer.net@met-technologies.com';
+            $config['smtp_pass']  = 'Dot123@#$%';
+            $config['charset']    = 'utf-8';
+            $config['newline']    = "\r\n";
+            $config['mailtype']   = 'html'; // or html
+            $config['validation'] = TRUE; // bool whether to validate email or not      
+            $this->email->initialize($config);
+            $this->email->from('developer.net@met-technologies.com', 'Copy max');
+            $this->email->to($email);
+            $this->email->subject('contact Us!');
+            $this->email->message($message);
+            if ($this->email->send()) {
+                $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for contacting us.');
+            } else {
+                $this->session->set_flashdata('success_message', 'Something Went Wrong.');
+            }
+            
+            ### Mail to Admin ############### 
+        }
+        
+        redirect('welcome/index/contact_us', 'refresh');
+    }
+    
+    // login register 
+    
+    
+    public function login_register()
+    {
+        //$this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout/layout_cart";
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data = array();
+        //echo "<pre>"; print_r($this->input->post());       
+        //$page =  htmlentities(end($this->uri->segments)); exit() ; 
+        //category  list
+        if ($this->ion_auth->logged_in()) {
+            $data['user_id'] = $this->ion_auth->get_user_id();
+            $user            = $this->ion_auth->user()->row();
+            $data['user']    = $user;
+        }
+        
+        if (isset($_POST['user_register'])) {
+            
+            $users_arr = $this->home_model->getAllUsers();
+            $status    = 1;
+            $group_id  = 2;
+            
+            $this->form_validation->set_rules('reg_email', 'Email', 'trim|required');
+            $this->form_validation->set_rules('reg_password', 'Password', 'trim|required');
+            $this->form_validation->set_rules('reg_confirm_password', 'Confirm Password', 'trim|required|matches[reg_password]');
+            
+            $isExists = false;
+            
+            if ($this->form_validation->run() != FALSE) {
+                foreach ($users_arr as $user) {
+                    //echo $users['email']."<br />";
+                    if ($user['email'] == $this->input->post('reg_email')) {
+                        $isExists = true;
+                        break;
+                    } else {
+                        $isExists = false;
+                    }
+                }
+                
+                //echo $isExists;
+                if ($isExists != true) {
+                    
+                    //if($this->ion_auth->register('', $this->input->post('reg_password'), $this->input->post('reg_email'), array('username'=>$this->input->post('reg_username')), array('2')) != FALSE)
+                    if ($this->ion_auth->register('', $this->input->post('reg_password'), $this->input->post('reg_email'), array(
+                        'first_name' => $this->input->post('f_name'),
+                        'last_name' => $this->input->post('l_name'),
+                        'phone' => $this->input->post('phone')
+                    ), array(
+                        '2'
+                    )) != FALSE) {
+                        
+                        $name = $this->input->post('f_name') . '' . $this->input->post('l_name');
+                        /* mail templete */
+                        
+                        $message = '<body style="padding: 0;margin: 0;background-color: #fff;font-family: "Open Sans", sans-serif;">
+                          <table width="100%" align="center">
+                           <tbody>
+                        <tr>
+                        <td>
+                        <table style="width: 600px; margin: 35px auto;" align="center">
+                        <tbody>
+                        <tr>
+                        <td style="color: #000;">
+
+                        <table style="border-top: 10px solid #d6d9d8;border-left: 10px solid #d6d9d8;border-right: 10px solid #d6d9d8;width: 100%;">
+                        <tbody>
+                        <tr>
+                        <td>
+                        <div style="text-align:center;padding: 45px 0 0 0;">
+                            <img src="' . base_url() . 'assets/frontend/images/logo.png" alt="logo">
+                        </div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;color: #045393;font-size: 15px;font-weight: 600;padding: 10px 0;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,sans-serif">
+                        <p><b>Welcome </b><span style="color: #000;"> ' . $name . '</span></p>
+                        
+
+                        <div style="width: 160px;margin: 3px auto 15px auto;height: 1px; background-color: #d1d1d1;"></div>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        <div style="margin: 0 45px;font-family:Arial !important;font-size: 18px">
+                        <pre style="color: #000;font-size: 16px;line-height: 22px;margin: 0 0 20px 0;font-family:Lucida Grande,Lucida Sans Unicode,Lucida Sans,DejaVu Sans,Verdana,sans-serif;">
+                          Thank You for registering with us. Will get back to you soon </p>
+
+                        </pre>
+                        </div>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+
+                        <table  style="background-color: #313232;width: 100%;text-align: center;color: #fff;font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,sans-serif;font-size: 13px;padding: 17px 0;">
+                        <tr>
+                        <td>
+                        2018 San Diego copy company. since 2018
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                        ©2018 San Diego copy company. All rights reserved.
+                        </td>
+                        </tr>
+                        </table>
+
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                        </td>
+                        </tr>
+                        </tbody>
+                   </table></body>';
+                        
+                        $config['protocol']   = 'smtp';
+                        $config['smtp_host']  = 'mail.met-technologies.com';
+                        $config['smtp_port']  = '25';
+                        $config['smtp_user']  = 'developer.net@met-technologies.com';
+                        $config['smtp_pass']  = 'Dot123@#$%';
+                        $config['charset']    = 'utf-8';
+                        $config['newline']    = "\r\n";
+                        $config['mailtype']   = 'html'; // or html
+                        $config['validation'] = TRUE; // bool whether to validate email or not      
+                        $this->email->initialize($config);
+                        $this->email->from('developer.net@met-technologies.com', 'Copy max');
+                        $this->email->to($email);
+                        $this->email->subject('Register with copymax!');
+                        $this->email->message($message);
+                        $this->email->set_crlf( "\r\n" );
+                        
+                        if ($this->email->send()) {
+                            $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for registering with  us.');
+                        } else {
+                            $this->session->set_flashdata('success_message', 'Something Went Wrong.');
+                        }
+                        
+                        /* end mail templete */
+                        
+                    }
+                } else {
+                    $this->session->set_flashdata('user_message', 'User already exists...');
+                }
+            } else {
+                $this->session->set_flashdata('user_message', 'Please Insert proper data...');
+            }
+            
+        }
+        if (isset($_POST['user_login'])) {
+            
+            $this->form_validation->set_rules('username', 'Username|Email', 'trim|required');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required');
+            
+            if ($this->form_validation->run() == true) {
+                $remember = (bool) $this->input->post('remember');
+                if ($this->ion_auth->login($this->input->post('username'), $this->input->post('password'), $remember)) {
+                    $user         = $this->ion_auth->user()->row();
+                    $data['user'] = $user;
+                    $this->session->set_flashdata('message', $this->ion_auth->messages());
+                    
+                    //Cart Session Update
+                    $cart_contents = $this->cart->contents();
+                    
+                    if (!empty($cart_contents)) {
+
+                        $this->cart->destroy();
+                        
+                        $user_id = $this->ion_auth->get_user_id();
+                        $arr     = $arr1 = $arr_session = array();
+                        foreach ($cart_contents as $row) {
+                            
+                            $arr['user_id']           = $user_id;
+                            $arr['product_id']        = $row['product_id'];
+                            $arr['name']              = $row['name'];
+                            $arr['image']             = $row['image'];
+                            $arr['price']             = $row['price'];
+                            $arr['qty']               = $row['qty'];
+                            $arr['priniting_details'] = $row['priniting_details'];
+                            $arr['finishing_details'] = $row['finishing_details'];
+                            $arr['copies']            = $row['copies'];
+                            $arr['pages']             = $row['pages'];                            
+                            $arr['created_on']        = date('Y-m-d H:i:s');
+                            $arr['updated_on']        = date('Y-m-d H:i:s');
+                            $arr['status']            = 1;
+
+                            $this->db->insert('tbl_cart', $arr);
+
+                            $arr['id']                = $row['product_id'];
+                            $this->cart->insert($arr);
+                            
+                        }
+                        
+                        //echo "<pre>";print_r($this->cart->contents());die();
+                    }
+                    redirect(base_url('manage-addresses'));
+                    
+                    if (count($this->cart->contents()) > 0) {
+                        redirect(base_url('checkout'));
+                    } else {
+                        redirect(base_url('manage-addresses'));
+                    }
+                } else {
+                    $this->session->set_flashdata('message', $this->ion_auth->errors());
+                }
+            } else {
+                $this->session->set_flashdata('message', $this->ion_auth->errors());
+            }
+        }
+        
+        //echo "<pre>";print_r($data);exit();
+        $data['page_slug'] = end($this->uri->segments);
+        
+        
+        $data['page_title'] = "Login & Registration";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "login";
+        $data['module']     = 'welcome';
+        
+        $this->load->view($this->_container, $data);
+    }
+    
+    public function checkout()
+    {
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data = array();
+
+        $data['input_data'] = $this->input->post();
+
+        //echo "<pre>";print_r($this->session->userdata());die();
+        if ($this->session->userdata('date')) {
+            $data['date'] = $this->session->userdata('date');
+        }elseif ($this->input->post('date') != "") {
+            $data['date'] = $this->input->post('date');
+        } else {
+            $data['date'] = date('Y-m-d');
+        }
+
+        if ($this->session->userdata('shipping_amount')) {
+            $data['shipping_amount'] = $this->session->userdata('shipping_amount');
+        }elseif ($this->input->post('shipping_amount') != "") {
+            $data['shipping_amount'] = $this->input->post('shipping_amount');
+        } else {
+            $data['shipping_amount'] = 0.00;
+        }
+        
+        if ($this->session->userdata('zip_code')) {
+            $data['zip_code'] = $this->session->userdata('zip_code');
+        }elseif ($this->input->post('zip_code') != "") {
+            $data['zip_code'] = $this->input->post('zip_code');
+        } else {
+            $data['zip_code'] = 92121;
+        }
+        
+        $data['cart_content']   = $this->cart->contents();
+        //$data['cart_sub_total'] = $this->cart->total();
+
+        if ($this->session->userdata('coupon')) {
+            $data['coupon'] = $this->session->userdata('coupon');
+        }elseif ($this->input->post('coupon') == "") {
+            $data['coupon'] = "0.00";
+        } else {
+            $data['coupon'] = $this->input->post('coupon');
+        }
+        
+        if ($this->session->userdata('subtotal')) {
+            $data['subtotal'] = $this->session->userdata('subtotal');
+        } else {
+            $data['subtotal'] = $this->input->post('subtotal');
+        }
+        
+        if ($this->session->userdata('total_amount')) {
+            $data['cart_sub_total'] = $this->session->userdata('total_amount');
+        } else {
+            $data['cart_sub_total'] = $this->input->post('total_amount');
+        }
+        
+        
+        if ($this->ion_auth->logged_in()) {
+            $data['user_id'] = $this->ion_auth->get_user_id();
+            $user            = $this->ion_auth->user()->row();
+            $data['user']    = $user;
+            
+        } else {
+            $data['user_id'] = "";
+            $data['user']    = "";
+        }
+        
+        if (isset($_POST['user_register'])) {
+            
+            $users_arr = $this->home_model->getAllUsers();
+            $status    = 1;
+            $group_id  = 2;
+            
+            $this->form_validation->set_rules('reg_email', 'Email', 'trim|required');
+            $this->form_validation->set_rules('reg_password', 'Password', 'trim|required');
+            $this->form_validation->set_rules('reg_confirm_password', 'Confirm Password', 'trim|required|matches[reg_password]');
+            
+            $isExists = false;
+            
+            if ($this->form_validation->run() != FALSE) {
+                foreach ($users_arr as $user) {
+                    //echo $users['email']."<br />";
+                    if ($user['email'] == $this->input->post('reg_email')) {
+                        $isExists = true;
+                        break;
+                    } else {
+                        $isExists = false;
+                    }
+                }
+                
+                //echo $isExists;
+                if ($isExists != true) {
+                    
+                    //if($this->ion_auth->register('', $this->input->post('reg_password'), $this->input->post('reg_email'), array('username'=>$this->input->post('reg_username')), array('2')) != FALSE)
+                    if ($this->ion_auth->register('', $this->input->post('reg_password'), $this->input->post('reg_email'), array(), array(
+                        '2'
+                    )) != FALSE) {
+                        
+                        /* Mail Section Start */
+                        $to      = $this->input->post('reg_email');
+                        $subject = "Copymax Registration";
+                        $message = "<html>
+                                    <head>
+                                    <title>Registration Email</title>
+                                    </head>
+                                    <body>
+                                    <p>Hi " . $this->input->post('reg_email') . ",</p>
+                                    <p>&nbsp;</p>
+                                    <p>Your Registration has been done successfully.<br/>Thank you for joining with Copymax.</p>
+                                    <p>&nbsp;</p>
+                                    <p>Best Regards,<br/>Copymax Team</p>
+                                    </body>
+                                    </html>";
+                        
+                        $headers = "From: jayanta.saha@met-technologies.com" . "\r\n";
+                        @mail($to, $subject, $message, $headers);
+                        /* Mail Section End */
+                        
+                        $this->session->set_flashdata('user_message', 'Registration done successfully.');
+                        
+                    }
+                    
+                } else {
+                    $this->session->set_flashdata('user_message', 'User already exists...');
+                }
+            } else {
+                $this->session->set_flashdata('user_message', 'Please Insert proper data...');
+            }
+        }
+        
+        if (isset($_POST['user_login'])) {
+            
+            $this->form_validation->set_rules('username', 'Username|Email', 'trim|required');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required');
+            
+            if ($this->form_validation->run() == true) {
+                $remember = (bool) $this->input->post('remember');
+                if ($this->ion_auth->login($this->input->post('username'), $this->input->post('password'), $remember)) {
+                    $user         = $this->ion_auth->user()->row();
+                    $data['user'] = $user;
+                    $this->session->set_flashdata('message', $this->ion_auth->messages());
+                    
+                    //Cart Session Update
+                    $cart_contents = $this->cart->contents();
+                    
+                    if (!empty($cart_contents)) {
+
+                        /*echo "<pre>";
+                        print_r($cart_contents);
+                        print_r($this->input->post('post_data'));
+                        die();*/
+
+                        $this->cart->destroy();
+
+                        $this->session->set_userdata('coupon', $this->input->post('post_data')['coupon']);
+                        $this->session->set_userdata('subtotal', $this->input->post('post_data')['subtotal']);
+                        $this->session->set_userdata('total_amount', $this->input->post('post_data')['total_amount']);
+                        $this->session->set_userdata('date', $this->input->post('post_data')['date']);
+                        $this->session->set_userdata('shipping_amount', $this->input->post('post_data')['shipping_amount']);
+                        $this->session->set_userdata('zip_code', $this->input->post('post_data')['zip_code']);
+                        
+                        $user_id = $this->ion_auth->get_user_id();
+                        $arr     = $arr1 = $arr_session = array();
+                        foreach ($cart_contents as $row) {
+                            
+                            $arr['user_id']           = $user_id;
+                            $arr['product_id']        = $row['product_id'];
+                            $arr['name']              = $row['name'];
+                            $arr['image']             = $row['image'];
+                            $arr['price']             = $row['price'];
+                            $arr['price_page']        = $row['price_page'];
+                            $arr['qty']               = $row['qty'];
+                            $arr['priniting_details'] = $row['priniting_details'];
+                            $arr['finishing_details'] = $row['finishing_details'];
+                            $arr['copies']            = $row['copies'];
+                            $arr['pages']             = $row['pages'];                            
+                            $arr['created_on']        = date('Y-m-d H:i:s');
+                            $arr['updated_on']        = date('Y-m-d H:i:s');
+                            $arr['status']            = 1;
+
+                            $this->db->insert('tbl_cart', $arr);
+
+                            $arr['id']                = $row['product_id'];
+                            $this->cart->insert($arr);
+                        }
+                        //echo "<pre>";print_r($this->cart->contents());die();
+                    }
+                    
+                    redirect(base_url('checkout'));
+                } else {
+                    $this->session->set_flashdata('user_message', $this->ion_auth->errors());
+                }
+            } else {
+                $this->session->set_flashdata('user_message', $this->ion_auth->errors());
+            }
+        }
+        
+        $data['page_slug'] = end($this->uri->segments);
+        
+        $data['countries']  = $this->home_model->getAllDetails('countries');
+        $data['page_title'] = "Login & Registration";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "checkout";
+        $data['module']     = 'welcome';
+        
+        $this->load->view($this->_container, $data);
+        
+    }
+    
+    
+    public function place_order()
+    {
+        
+        if ($this->ion_auth->get_user_id() == "") {
+            redirect('cart');
+        } else {
+            $user_id = $this->ion_auth->get_user_id();
+        }
+        
+        if ($this->input->post('place_order')) {
+            
+            //$data['cart_content']         = $this->cart->contents();
+            //$data['cart_sub_total']         = $this->cart->total();
+            
+            
+            $insert_address = array(
+                'user_id' => $user_id,
+                'first_name' => $this->input->post('first_name'),
+                'last_name' => $this->input->post('last_name'),
+                'email' => $this->input->post('email'),
+                'phone' => $this->input->post('email'),
+                'country' => $this->input->post('country'),
+                'state' => '',
+                'city' => $this->input->post('city'),
+                'address' => $this->input->post('address'),
+                'zip_code' => $this->input->post('zip_code'),
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+            );
+            
+            $this->db->insert('tbl_billing_address', $insert_address);
+            $billing_id = $this->db->insert_id();
+            $id         = rand(11111, 999999);
+            foreach ($this->cart->contents() as $cart) {
+                
+                $insert_order = array(
+                    'order_id' => '#R000' . $id,
+                    'billing_id' => $billing_id,
+                    'shipping_id' => '',
+                    'user_id' => $user_id,
+                    'product_id' => $cart['product_id'],
+                    'printing_item' => $cart['priniting_details'],
+                    'finishing_item' => $cart['finishing_details'],
+                    'price' => $cart['price'],
+                    'quantity' => $cart['qty'],
+                    'images' => $cart['image'],
+                    'total_price' => $cart['subtotal'],
+                    'created_at' => date('Y-m-d H:i:s')
+                    
+                    
+                );
+                
+                $this->db->insert('tbl_orders', $insert_order);
+                
+            }
+            // exit() ;
+            
+            $this->cart->destroy();
+            
+            
+            $this->session->set_flashdata('success_message', 'Your order has been placed  Successfully');
+        }
+        
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data               = array();
+        $data['ref']        = '#R000' . $id;
+        $data['page_title'] = "Order Success";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "order_success";
+        $data['module']     = 'welcome';
+        
+        $this->load->view($this->_container, $data);
+        
+    }
+    
+    
+    public function forget_password()
+    {
+        if (isset($_POST['forget_password'])) {
+            $this->form_validation->set_rules('user_email', 'User Email', 'trim|required');
+            
+            if ($this->form_validation->run() != FALSE) {
+                $user_email = $this->input->post('user_email');
+                $result     = $this->home_model->checkUserByEmail($user_email);
+                
+                if (count($result) > 0) {
+                    $forgotten = $this->ion_auth->forgotten_password($user_email);
+                    //echo count($forgotten)."<br>";
+                    //echo $forgotten['forgotten_password_code']."<br>";
+                    //echo"<pre>"; print_r($forgotten); exit;
+                    
+                    //$forget_link = base_url()."my-account/reset-password?key=".$forgotten['forgotten_password_code'];
+                    $forget_link = base_url() . "my-account/reset-password/" . $forgotten['forgotten_password_code'];
+                    
+                    $message = "<html>
+                                    <head>
+                                    <title>Forgot Password</title>
+                                    </head>
+                                    <body>
+                                    <p>Hi " . $this->input->post('reg_email') . ",</p>
+                                    <p>&nbsp;</p>
+                                    <p>Click <a href='$forget_link'>here</a> to reset your Copymax account password.</p>
+                                    <p>&nbsp;</p>
+                                    <p>Best Regards,<br/>Copymax Team</p>
+                                    </body>
+                                    </html>";
+                    
+                    $config['protocol']   = 'smtp';
+                    $config['smtp_host']  = 'mail.met-technologies.com';
+                    $config['smtp_port']  = '25';
+                    $config['smtp_user']  = 'developer.net@met-technologies.com';
+                    $config['smtp_pass']  = 'Dot123@#$%';
+                    $config['charset']    = 'utf-8';
+                    $config['newline']    = "\r\n";
+                    $config['mailtype']   = 'html'; // or html
+                    $config['validation'] = TRUE; // bool whether to validate email or not      
+                    $this->email->initialize($config);
+                    $this->email->from('developer.net@met-technologies.com', 'Copy max');
+                    $this->email->to($user_email);
+                    $this->email->subject('Forget password');
+                    $this->email->message($message);
+                    
+                    if ($this->email->send()) {
+                        $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for registering with  us.');
+                    } else {
+                        $this->session->set_flashdata('success_message', 'Something Went Wrong.');
+                    }
+                    
+                    
+                    if ($this->email->send()) {
+                        $this->session->set_flashdata('message', 'Please check your email to reset your account password.');
+                    } else {
+                        $this->session->set_flashdata('message', 'Please try again.');
+                    }
+                } else {
+                    $this->session->set_flashdata('message', 'User not registered with us!');
+                }
+                
+                redirect(base_url("login"), 'refresh');
+            }
+        }
+        
+        
+    }
+    
+    public function reset_password()
+    {
+        
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $forget_code = end($this->uri->segments);
+        
+        //$code = $this->input->get('key');
+        $data         = array();
+        $data['code'] = $forget_code;
+        
+        if (isset($_POST['reset_password'])) {
+            
+            $this->form_validation->set_rules('password_1', 'Password 1', 'trim|required');
+            $this->form_validation->set_rules('password_2', 'Password 2', 'trim|required');
+            
+            $password1 = $this->input->post('password_1');
+            $password2 = $this->input->post('password_2');
+            
+            if ($password1 == $password2) {
+                $reset = $this->ion_auth->forgotten_password_complete($forget_code, $password1);
+                
+                if ($reset) {
+                    //if the reset worked then send them to the login page
+                    $this->session->set_flashdata('message', $this->ion_auth->messages());
+                } else {
+                    //if the reset didnt work then send them back to the forgot password page
+                    $this->session->set_flashdata('message', $this->ion_auth->errors());
+                    //redirect("auth/forgot_password", 'refresh');                    
+                }
+            } else {
+                $this->session->set_flashdata('message', "Password doesn't match. Please try again.");
+            }
+            
+            redirect(base_url("login"), 'refresh');
+        }
+        
+        $data['page_title'] = "Reset Password";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "resetpassword";
+        $data['module']     = 'welcome';
+        $this->load->view($this->_container, $data);
+        
+    }
+    
+    
+    // Manage Addresses 
+    public function manage_addresses()
+    {
+        //$user_id = '1';  // that would be the login user id
+        if ($this->ion_auth->get_user_id() == "") {
+            redirect('cart');
+        } else {
+            $user_id = $this->ion_auth->get_user_id();
+        }
+        if (isset($_POST['submit'])) {
+            
+            
+            //echo  "here111";die;
+            if ($this->input->post('is_default') == "") {
+                $is_deafult = '0';
+            } else {
+                $is_deafult = $this->input->post('is_default');
+            }
+            $this->form_validation->set_rules('first_name', 'First Name', 'trim|required');
+            $this->form_validation->set_rules('address', 'Address', 'trim|required');
+            $insert_data = array(
+                'user_id' => $user_id,
+                'first_name' => $this->input->post('first_name'),
+                'last_name' => $this->input->post('last_name'),
+                'company' => $this->input->post('company'),
+                'address' => $this->input->post('address'),
+                'city' => $this->input->post('city'),
+                'state' => $this->input->post('state'),
+                'zip_code' => $this->input->post('zip_code'),
+                'is_default' => $is_deafult,
+                'created_at' => date('Y-m-d H:i:s')
+            );
+            $this->db->insert('tbl_user_address', $insert_data);
+            $this->session->set_flashdata('success_message', 'Address Added Successfully');
+            redirect('welcome/index/manage_addresses');
+        }
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        
+        $data                 = array();
+        //$page_slug = 'contact-us'; 
+        //$data['page_slug'] = $page_slug; 
+        $data['page_content'] = $this->home_model->Show_Address_Book($user_id);
+        
+        //print_r($data['page_content']);
+        
+        $data['page_title'] = "Manage Addresses";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "manageadresses";
+        $data['module']     = 'welcome';
+        
+        //echo "<pre>";print_r($data['content']);exit();
+        
+        $this->load->view($this->_container, $data);
+    }
+    // Update view open 
+    public function update_addresses()
+    {
+        $tbl_user_address_id = $this->input->post('tbl_user_address_id');
+        $this->db->select('*');
+        $this->db->from('tbl_user_address');
+        $this->db->where(array(
+            'tbl_user_address.id' => $tbl_user_address_id
+        ));
+        $query  = $this->db->get();
+        $result = $query->row_array();
+        echo json_encode($result);
+    }
+    
+    public function update_manage_addresses()
+    {
+        $user_id = $this->input->post('user_id');
+        if ($this->input->post('is_default') == "") {
+            $is_deafult = '0';
+        } else {
+            $is_deafult = $this->input->post('is_default');
+        }
+        $update_data = array(
+            'first_name' => $this->input->post('first_name'),
+            'last_name' => $this->input->post('last_name'),
+            'company' => $this->input->post('company'),
+            'state' => $this->input->post('state'),
+            'city' => $this->input->post('city'),
+            'address' => $this->input->post('address'),
+            'zip_code' => $this->input->post('zip_code'),
+            'is_default' => $is_deafult
+        );
+        $this->db->where(array(
+            'id' => $this->input->post('tbl_user_address_id')
+        ));
+        $this->db->update('tbl_user_address', $update_data);
+        
+        $this->session->set_flashdata('success_message', 'Address Updated Successfully');
+        
+        redirect('welcome/index/manage_addresses/' . $user_id);
+        
+    }
+    
+    public function delete_manage_addresses()
+    {
+        $user_id         = $this->input->post('user_id1');
+        $condition['id'] = $this->input->post('tbl_user_address_id1');
+        $this->db->delete('tbl_user_address', $condition);
+        $this->session->set_flashdata('success_message', 'Address Deleted Successfully');
+        redirect('welcome/index/manage_addresses/' . $user_id);
+        
+    }
+    
+    public function edit_profile()
+    {
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        if ($this->ion_auth->logged_in()) {
+            $user_id            = $this->ion_auth->get_user_id();
+            $where              = 'users.id';
+            $data['users_data'] = $this->home_model->get_data('users', $where, $user_id);
+        }
+        
+        if ($this->input->post('save_changes') == 'save changes') {
+            $update_data = array(
+                'ip_address' => $this->get_client_ip_env(),
+                'first_name' => $this->input->post('f_name'),
+                'last_name' => $this->input->post('l_name'),
+                'email' => $this->input->post('reg_mail'),
+                'password' => '',
+                'phone' => $this->input->post('mobile')
+                
+            );
+            
+            if ($this->home_model->Update_user($user_id, $update_data)) {
+                $this->session->set_flashdata('update_message', '<strong></strong> Record Updated successfully.');
+                redirect(base_url() . 'editprofile');
+            } else {
+                $this->session->set_flashdata('update_message', '<strong>Something wrong!!!</strong>.');
+                redirect(base_url() . 'editprofile');
+            }
+        } else {
+            $this->session->set_flashdata('update_message', '<strong>Data not saved!!!</strong>.');
+        }
+        
+        
+        $data['page_title'] = "Manage Profile";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "editprofile";
+        $data['module']     = 'welcome';
+        $this->load->view($this->_container, $data);
+    }
+    
+    public function order_list()
+    {
+        $this->_container = $this->config->item('bootsshop_template_dir_welcome') . "layout.php";
+        $this->_modules   = $this->config->item('modules_locations');
+        if ($this->ion_auth->logged_in()) {
+            $user_id            = $this->ion_auth->get_user_id();
+            $where              = 'tbl_orders.user_id';
+            $data['order_list'] = $this->home_model->get_data('tbl_orders', $where, $user_id);
+        }
+        
+        $data['page_title'] = "Order Details";
+        $data['page']       = $this->config->item('bootsshop_template_dir_welcome') . "order_list";
+        $data['module']     = 'welcome';
+        $this->load->view($this->_container, $data);
+    }
+    
+    
+    public function logout()
+    {
+        $this->ion_auth->logout();
+        $this->cart->destroy();
+        redirect(base_url());
+    }
+    
+    public function get_client_ip_env()
+    {
+        $ipaddress = '';
+        if (getenv('HTTP_CLIENT_IP'))
+            $ipaddress = getenv('HTTP_CLIENT_IP');
+        else if (getenv('HTTP_X_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
+        else if (getenv('HTTP_X_FORWARDED'))
+            $ipaddress = getenv('HTTP_X_FORWARDED');
+        else if (getenv('HTTP_FORWARDED_FOR'))
+            $ipaddress = getenv('HTTP_FORWARDED_FOR');
+        else if (getenv('HTTP_FORWARDED'))
+            $ipaddress = getenv('HTTP_FORWARDED');
+        else if (getenv('REMOTE_ADDR'))
+            $ipaddress = getenv('REMOTE_ADDR');
+        else
+            $ipaddress = 'UNKNOWN';
+        
+        return $ipaddress;
+    }
+}

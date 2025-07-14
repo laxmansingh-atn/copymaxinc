@@ -1,0 +1,15 @@
+drwxr-xr-x    6 sandiegoco sandiegoco       4096 Feb 26  2019 .
+drwxr-xr-x   32 sandiegoco sandiegoco       4096 Mar  6  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco        364 Mar  1  2019 .bower.json
+-rw-r--r--    1 sandiegoco sandiegoco         35 Mar  1  2019 .gitignore
+-rw-r--r--    1 sandiegoco sandiegoco      34519 Mar  1  2019 LICENSE-AGPL
+-rw-r--r--    1 sandiegoco sandiegoco        720 Mar  1  2019 LICENSE-COMMERCIAL
+-rw-r--r--    1 sandiegoco sandiegoco        359 Mar  1  2019 README.md
+-rw-r--r--    1 sandiegoco sandiegoco       1215 Mar  1  2019 build.sh
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 converter
+-rw-r--r--    1 sandiegoco sandiegoco       6635 Mar  1  2019 jquery-jvectormap.css
+-rw-r--r--    1 sandiegoco sandiegoco       1081 Mar  1  2019 jquery-jvectormap.js
+-rw-r--r--    1 sandiegoco sandiegoco        835 Mar  1  2019 jvectormap.jquery.json
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 lib
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 src
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 tests

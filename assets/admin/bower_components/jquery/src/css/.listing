@@ -1,0 +1,9 @@
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x   15 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco        530 Mar  1  2019 addGetHookIf.js
+-rw-r--r--    1 sandiegoco sandiegoco       1897 Mar  1  2019 adjustCSS.js
+-rw-r--r--    1 sandiegoco sandiegoco       1681 Mar  1  2019 curCSS.js
+-rw-r--r--    1 sandiegoco sandiegoco        317 Mar  1  2019 hiddenVisibleSelectors.js
+-rw-r--r--    1 sandiegoco sandiegoco       2304 Mar  1  2019 showHide.js
+-rw-r--r--    1 sandiegoco sandiegoco       2453 Mar  1  2019 support.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 var

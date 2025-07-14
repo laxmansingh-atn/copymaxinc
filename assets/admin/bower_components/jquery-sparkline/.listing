@@ -1,0 +1,12 @@
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Feb 26  2019 .
+drwxr-xr-x   32 sandiegoco sandiegoco       4096 Mar  6  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco        631 Mar  1  2019 .bower.json
+-rw-r--r--    1 sandiegoco sandiegoco      10311 Mar  1  2019 Changelog.txt
+-rw-r--r--    1 sandiegoco sandiegoco       1084 Mar  1  2019 Makefile
+-rw-r--r--    1 sandiegoco sandiegoco        558 Mar  1  2019 README.md
+-rw-r--r--    1 sandiegoco sandiegoco        338 Mar  1  2019 bower.json
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 dist
+-rw-r--r--    1 sandiegoco sandiegoco        144 Mar  1  2019 minheader.txt
+-rw-r--r--    1 sandiegoco sandiegoco        952 Mar  1  2019 sparkline.jquery.json
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 src
+-rw-r--r--    1 sandiegoco sandiegoco          6 Mar  1  2019 version.txt

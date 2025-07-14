@@ -1,0 +1,13 @@
+drwxr-xr-x    9 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco       1103 Mar  1  2019 MIT-LICENSE.txt
+-rw-r--r--    1 sandiegoco sandiegoco       1358 Mar  1  2019 README.md
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 actionscript
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 add-on
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 jplayer
+-rw-r--r--    1 sandiegoco sandiegoco        799 Mar  1  2019 jplayer.jquery.json
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 jquery.jplayer
+-rw-r--r--    1 sandiegoco sandiegoco        559 Mar  1  2019 package.json
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 popcorn
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 skin
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 skin_ol

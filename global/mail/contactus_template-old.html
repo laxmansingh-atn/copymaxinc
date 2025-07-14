@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact us</title>
+
+<style>
+	body{
+		padding: 0;
+		margin: 0;
+		background-color: #fff;
+		font-family: 'Open Sans', sans-serif;
+	}
+	table{
+		margin: 0;
+		padding: 0;
+	}
+	.brt-table{
+		border-top: 10px solid #d6d9d8;
+		border-left: 10px solid #d6d9d8;
+		border-right: 10px solid #d6d9d8;
+		width: 100%;
+	}
+	.logo-wrapper{
+		text-align: center;
+		padding: 45px 0 0 0;
+	}
+	.user-name{
+		text-align: center;
+		color: #045393;
+		font-size: 17px;
+		font-weight: 600;
+		padding: 10px 0;
+	}
+	
+	.key-logo{
+		text-align: center;
+	}
+	.content-body{
+		margin: 0 10%;
+	}
+	.content-body p{
+		font-size: 13px;
+		color: #000;
+		line-height: 22px;
+		margin: 0 0 20px 0;
+	}
+	.content-body p span{
+		color: #045393;
+	}
+	
+	.reset-btn{
+		text-align: center;
+	}
+	.reset-btn a.reset-password-btn,
+	.reset-btn a.reset-password-btn:hover,
+	.reset-btn a.reset-password-btn:focus{
+    background-color: #fd5c63;
+    width: 180px;
+    margin: 17px auto;
+    text-align: center;
+    display: block;
+    padding: 12px 22px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+	.spe-span{
+		display: block;
+	}
+	.footer-wrapper{
+		background-color: #313232;
+		width: 100%;
+	}
+	.footer-wrapper tr td{
+		text-align: center;
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 13px;
+		padding: 25px 0;
+	}
+</style>
+</head>
+
+<body>
+
+<table width="100%" align="center">
+	<tbody>
+		<tr>
+		  <td>
+		  	<table style="width: 100%; margin: 5% auto;" align="center">
+		  		<tbody>
+		  			<tr>
+		  				<td style="color: #000;">
+		  					<!-- Top Part -->
+		  						<table class="brt-table">
+		  							<tbody>
+		  								<tr>
+		  									<td>
+		  										<div class="logo-wrapper">
+		  											
+		  											 <a href="{web_url}"><img src="{logo}" alt="logo" style="width: 200px;"></a> 
+		  										</div>
+		  									</td>
+		  								</tr>	
+		  								<tr>
+		  									<td class="user-name" >
+		  										Hi <span>Admin,</span>
+		  										
+		  									</td>
+		  								</tr>	  								
+		  								<tr>
+		  									<td>
+		  										<div class="content-body" style="font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,' sans-serif'">
+		  											<p styel="font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,' sans-serif';">
+		  												Someone wants to contacting with you. please check the details below.
+		  											</p>
+
+													<p>
+														Name: {full_name}<br>
+														Contact No: {phone}<br>
+														Email: {email}<br>
+														Subject: {subject}<br>
+														Description: {description}<br>
+
+													</p>
+												</div>
+		  									</td>
+		  								</tr>
+		  							</tbody>
+		  						</table>
+		  					<!-- Top Part end -->
+		  					
+		  					<!-- Bottom Part -->
+		  						<table class="footer-wrapper" style="font-family:Lucida Grande, Lucida Sans Unicode, Lucida Sans, DejaVu Sans, Verdana,' sans-serif'">
+		  							<tr>
+		  								<td>
+		  									Copyright &copy; {current_year} . All rights reserved.
+		  								</td>
+		  							</tr>
+		  						</table>
+		  					<!-- Bottom Part End -->
+		  				</td>
+		  			</tr>
+		  		</tbody>
+		  	</table>
+		  </td>
+		</tr>
+	</tbody>
+	
+</table>
+</body>
+</html>

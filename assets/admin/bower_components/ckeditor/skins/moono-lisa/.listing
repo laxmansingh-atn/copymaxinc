@@ -1,0 +1,15 @@
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco      13550 Mar  1  2019 dialog.css
+-rw-r--r--    1 sandiegoco sandiegoco      14461 Mar  1  2019 dialog_ie.css
+-rw-r--r--    1 sandiegoco sandiegoco      14944 Mar  1  2019 dialog_ie8.css
+-rw-r--r--    1 sandiegoco sandiegoco      14490 Mar  1  2019 dialog_iequirks.css
+-rw-r--r--    1 sandiegoco sandiegoco      48420 Mar  1  2019 editor.css
+-rw-r--r--    1 sandiegoco sandiegoco      48501 Mar  1  2019 editor_gecko.css
+-rw-r--r--    1 sandiegoco sandiegoco      49419 Mar  1  2019 editor_ie.css
+-rw-r--r--    1 sandiegoco sandiegoco      50225 Mar  1  2019 editor_ie8.css
+-rw-r--r--    1 sandiegoco sandiegoco      50068 Mar  1  2019 editor_iequirks.css
+-rw-r--r--    1 sandiegoco sandiegoco       9391 Mar  1  2019 icons.png
+-rw-r--r--    1 sandiegoco sandiegoco      31549 Mar  1  2019 icons_hidpi.png
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 images
+-rw-r--r--    1 sandiegoco sandiegoco       2224 Mar  1  2019 readme.md

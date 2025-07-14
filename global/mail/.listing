@@ -1,0 +1,26 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Oct 10 08:13 .
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Jul  2 10:07 ..
+-rw-r--r--    1 sandiegoco sandiegoco       5645 Aug 26 09:20 Invoice_pending.html
+-rw-r--r--    1 sandiegoco sandiegoco       6308 Jul  2 10:24 admin_contact.html
+-rw-r--r--    1 sandiegoco sandiegoco       6443 Jul  2 10:24 admin_redeem.html
+-rw-r--r--    1 sandiegoco sandiegoco       4360 Jul  2 10:24 approval_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       3465 Jul  2 10:24 contactus_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       3207 Jul  2 10:24 contactus_template_bkp.html
+-rw-r--r--    1 sandiegoco sandiegoco       5522 Jul  2 10:24 forgotpassword_template - Copy.html
+-rw-r--r--    1 sandiegoco sandiegoco       5154 Jul  2 10:24 forgotpassword_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       7035 Oct 10 08:13 invoice_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       5651 Jul  3 10:47 invoice_template_1.html
+-rw-r--r--    1 sandiegoco sandiegoco       5913 Jul  2 10:24 job_create.html
+-rw-r--r--    1 sandiegoco sandiegoco       4254 Sep 26 10:58 order_status_change.html
+-rw-r--r--    1 sandiegoco sandiegoco       6108 Jul  2 10:24 other_reg_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       5851 Jul  2 10:24 password.html
+-rw-r--r--    1 sandiegoco sandiegoco       5992 Jul  2 10:24 password_23_05_19.html
+-rw-r--r--    1 sandiegoco sandiegoco       5535 Jul  2 10:24 pwreset - Copy.html
+-rw-r--r--    1 sandiegoco sandiegoco       5535 Jul  2 10:24 pwreset.html
+-rw-r--r--    1 sandiegoco sandiegoco       5171 Jul  2 10:24 registration_template.html
+-rw-r--r--    1 sandiegoco sandiegoco       6910 Jul  2 10:24 registration_template_28_05_2019.html
+-rw-r--r--    1 sandiegoco sandiegoco       4833 Jul  2 10:24 registration_template_admin.html
+-rw-r--r--    1 sandiegoco sandiegoco       5659 Jul  2 10:24 registration_template_step4.html
+-rw-r--r--    1 sandiegoco sandiegoco       5667 Jul  2 10:24 registration_template_step4_bkp.html
+-rw-r--r--    1 sandiegoco sandiegoco       6213 Jul  2 10:24 user_contact.html
+-rw-r--r--    1 sandiegoco sandiegoco       6222 Jul  2 10:24 user_redeem.html

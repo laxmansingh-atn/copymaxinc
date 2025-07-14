@@ -1,0 +1,11 @@
+drwxr-xr-x    7 sandiegoco sandiegoco       4096 Mar  6  2019 .
+drwxr-xr-x   12 sandiegoco sandiegoco       4096 Mar  6  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco      56409 Mar  1  2019 changelog.txt
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Feb 26  2019 filemanager
+-rw-r--r--    1 sandiegoco sandiegoco       3591 Mar  1  2019 jquery.tinymce.min.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Feb 26  2019 langs
+-rw-r--r--    1 sandiegoco sandiegoco      26427 Mar  1  2019 license.txt
+drwxr-xr-x   47 sandiegoco sandiegoco       4096 Feb 26  2019 plugins
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Feb 26  2019 skins
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Feb 26  2019 themes
+-rw-r--r--    1 sandiegoco sandiegoco     405104 Mar  1  2019 tinymce.min.js

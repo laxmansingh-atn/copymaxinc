@@ -1,0 +1,12 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 May 22 02:46 .
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 May 22 02:46 ..
+-rw-r--r--    1 sandiegoco sandiegoco        551 May 22 02:46 AccessRequestXPCI.xsd
+-rw-r--r--    1 sandiegoco sandiegoco       3273 May 22 02:46 DeniedParty.wsdl
+-rw-r--r--    1 sandiegoco sandiegoco       4512 May 22 02:46 DeniedPartyWebServiceSchema.xsd
+-rw-r--r--    1 sandiegoco sandiegoco       2072 May 22 02:46 ErrorXPCI.xsd
+-rw-r--r--    1 sandiegoco sandiegoco       3187 May 22 02:46 ExportLicense.wsdl
+-rw-r--r--    1 sandiegoco sandiegoco       4776 May 22 02:46 ExportLicenseDetectorWebServiceSchema.xsd
+-rw-r--r--    1 sandiegoco sandiegoco       3154 May 22 02:46 ImportCompliance.wsdl
+-rw-r--r--    1 sandiegoco sandiegoco       4532 May 22 02:46 ImportComplianceWebServiceSchema.xsd
+-rw-r--r--    1 sandiegoco sandiegoco       3118 May 22 02:46 LandedCost.wsdl
+-rw-r--r--    1 sandiegoco sandiegoco       9015 May 22 02:46 LandedCostWebServiceSchema.xsd

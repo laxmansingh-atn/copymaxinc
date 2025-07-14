@@ -1,0 +1,197 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2025-05-22 00:01:22 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:13:50 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:20:10 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:21:33 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:21:33 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:21:34 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:21:54 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:21:59 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:22:06 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:25:46 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:25:52 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:37:26 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:37:26 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:37:26 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:43:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:45:41 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:45:43 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:45:55 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:47:05 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:52:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:57:40 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:58:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 00:58:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:07:20 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:25:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:25:47 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:33:50 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:35:17 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:39:18 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:39:19 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:44:50 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:45:47 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:46:06 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 174
+ERROR - 2025-05-22 01:46:06 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 175
+ERROR - 2025-05-22 01:46:06 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 198
+ERROR - 2025-05-22 01:46:06 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 221
+ERROR - 2025-05-22 01:46:28 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 174
+ERROR - 2025-05-22 01:46:28 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 175
+ERROR - 2025-05-22 01:46:28 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 198
+ERROR - 2025-05-22 01:46:28 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 221
+ERROR - 2025-05-22 01:46:33 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 174
+ERROR - 2025-05-22 01:46:33 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 175
+ERROR - 2025-05-22 01:46:33 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 198
+ERROR - 2025-05-22 01:46:33 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 221
+ERROR - 2025-05-22 01:46:59 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 174
+ERROR - 2025-05-22 01:46:59 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 175
+ERROR - 2025-05-22 01:46:59 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 198
+ERROR - 2025-05-22 01:46:59 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 221
+ERROR - 2025-05-22 01:53:27 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 01:54:48 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:00:53 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:03:21 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:11:56 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:11:56 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:14:44 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:14:48 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:14:48 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:26:18 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:33:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:38:16 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:50:21 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 02:58:18 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:05:02 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:08:18 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:12:10 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:17:35 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:25:49 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:26:41 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:29:51 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:31:12 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:31:13 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:31:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:32:04 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:40:11 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 03:49:48 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:00:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:26:27 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:33:08 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:02 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:02 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:02 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:54:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:56:04 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 04:56:05 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:12:23 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:12:23 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:21:52 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:27:50 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:27:50 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:40:26 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:40:27 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:42:34 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:42:35 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 05:57:38 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:09:42 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:13:32 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:15:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:15:35 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:36:13 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:36:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 06:39:20 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 07:42:16 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 07:47:39 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 07:52:31 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 08:26:52 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 08:27:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 08:56:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 09:23:22 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 09:34:22 --> 404 Page Not Found: ../modules/admin/controllers/Admin/tinymce
+ERROR - 2025-05-22 09:44:39 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 09:48:02 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 09:48:35 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 09:57:09 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:01:15 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:07:30 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:08:09 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:10:18 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:23:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:44:56 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:47:11 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:47:11 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:50:08 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:55:37 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:56:58 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 10:59:04 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:06:04 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:08:22 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:14:45 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:16:10 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:41:52 --> 404 Page Not Found: ../modules/welcome/controllers/Index/contact-us
+ERROR - 2025-05-22 11:56:49 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 11:56:49 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 12:20:20 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 12:38:40 --> 404 Page Not Found: ../modules/welcome/controllers/Index/contact-us
+ERROR - 2025-05-22 13:03:48 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 13:29:29 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 13:49:11 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 13:58:33 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 14:22:47 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 14:33:54 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 15:11:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 15:41:19 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 15:57:13 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 16:03:52 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 16:05:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 16:44:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:17:31 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:17:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:24:38 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:24:38 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:26:41 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:27:00 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:27:05 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:38:53 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:38:53 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:41:59 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 17:41:59 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:01:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:01:25 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:19:16 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:24:57 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:27:59 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:28:01 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:48:56 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 18:55:03 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:11:35 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:29:09 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:29:09 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:29:09 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:29:28 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:37:54 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:37:54 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 19:38:34 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 20:11:21 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 21:51:43 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 21:53:07 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 21:53:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 21:53:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:01:14 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:01:22 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:02:15 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:02:15 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:12:12 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 22:56:08 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:41:00 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:42:05 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:43:01 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:43:13 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:51:59 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:56:36 --> 404 Page Not Found: /index
+ERROR - 2025-05-22 23:56:36 --> 404 Page Not Found: /index

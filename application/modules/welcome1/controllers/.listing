@@ -1,0 +1,17 @@
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Feb 26  2019 .
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Mar  6  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco      44472 Jun 21 11:15 About.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 Academic.php
+-rw-r--r--    1 sandiegoco sandiegoco       7619 Jun 21 11:15 Admission.php
+-rw-r--r--    1 sandiegoco sandiegoco      35908 Jun 21 11:15 Cart.php
+-rw-r--r--    1 sandiegoco sandiegoco       7535 Jun 21 11:15 Contact.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 Gallery.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 Index.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 News.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 Payment.php
+-rw-r--r--    1 sandiegoco sandiegoco       9595 Jun 21 11:15 Policy.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 Resources.php
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 font
+-rw-r--r--    1 sandiegoco sandiegoco       1339 Jun 21 11:15 fpdf.css
+-rw-r--r--    1 sandiegoco sandiegoco      47084 Jun 21 11:15 fpdf.php
+-rw-r--r--    1 sandiegoco sandiegoco       5727 Jun 21 11:15 mypdf.php

@@ -1,0 +1,6 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 May 22 02:46 .
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 May 22 02:46 ..
+-rw-r--r--    1 sandiegoco sandiegoco       1219 May 22 02:46 vfsStreamAbstractVisitor.php
+-rw-r--r--    1 sandiegoco sandiegoco       2225 May 22 02:46 vfsStreamPrintVisitor.php
+-rw-r--r--    1 sandiegoco sandiegoco       2144 May 22 02:46 vfsStreamStructureVisitor.php
+-rw-r--r--    1 sandiegoco sandiegoco       1115 May 22 02:46 vfsStreamVisitor.php

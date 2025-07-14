@@ -1,0 +1,11 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x   11 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco       6218 Mar  1  2019 array-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco        667 Mar  1  2019 base-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       2903 Mar  1  2019 inputData-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       2732 Mar  1  2019 maximumInputLength-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       3770 Mar  1  2019 maximumSelectionLength-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       2642 Mar  1  2019 minimumInputLength-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco      10378 Mar  1  2019 select-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       6068 Mar  1  2019 tags-tests.js
+-rw-r--r--    1 sandiegoco sandiegoco       5131 Mar  1  2019 tokenizer-tests.js

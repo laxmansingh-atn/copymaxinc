@@ -1,0 +1,13 @@
+drwxr-xr-x    6 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 bindings
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 dependencyLibs
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 global
+-rw-r--r--    1 sandiegoco sandiegoco      24607 Mar  1  2019 inputmask.date.extensions.js
+-rw-r--r--    1 sandiegoco sandiegoco       3497 Mar  1  2019 inputmask.extensions.js
+-rw-r--r--    1 sandiegoco sandiegoco     124124 Mar  1  2019 inputmask.js
+-rw-r--r--    1 sandiegoco sandiegoco      25296 Mar  1  2019 inputmask.numeric.extensions.js
+-rw-r--r--    1 sandiegoco sandiegoco       3974 Mar  1  2019 inputmask.phone.extensions.js
+-rw-r--r--    1 sandiegoco sandiegoco       7940 Mar  1  2019 inputmask.regex.extensions.js
+-rw-r--r--    1 sandiegoco sandiegoco       2627 Mar  1  2019 jquery.inputmask.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 phone-codes

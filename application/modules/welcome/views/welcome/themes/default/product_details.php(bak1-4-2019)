@@ -1,0 +1,429 @@
+<div class="page_inner prod-tab-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12">
+		  <div class="col-md-12 col-sm-12">
+		  <div class="pricetable">
+		  	<table class="table table-bordered"> 
+				<span>Black & White Copies, 20lb paper, no bleed</span> 
+				<tbody> 
+				<tr> 
+				<th>Pages</th> 
+				<td>Prices</td> 
+				<td>Pages</td> 
+				<td>Prices</td> 
+				</tr> 
+				<tr> 
+				<td>1</td> 
+				<td>2.5c</td> 
+				<td>50,000</td> 
+				<td>1.8c</td> 
+				</tr> 
+				<tr> 
+				<td>30,000</td> 
+				<td>2c</td> 
+				<td>100,000</td> 
+				<td>1.65c</td> 
+				</tr> 
+				</tbody> 
+				</table>
+		  </div>
+		  	<div class="product_left_tab">
+		  		<!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#producttab" aria-controls="home" role="tab" data-toggle="tab">Product</a></li>
+					<li role="presentation"><a href="#faqtab" aria-controls="profile" role="tab" data-toggle="tab">FAQ’s</a></li>
+					<li role="presentation"><a href="#spectab" aria-controls="messages" role="tab" data-toggle="tab">Specs & Templates</a></li>
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="producttab">
+						<h2>Black and white copies at your finger tips, $0.025 per copy</h2>
+						<p>Who doesn’t need black & white copies, everybody does. Here at 
+						San Diego Copies/Prints we take the headache and hassle out of your printing needs and let you focus on your business plus we will save you tons of money. We are specialized in black and white copying & printing, from a single flyer to newsletters, programs, memos, reports, forms.....basically we are your one stop source for all your copying & printing needs from manuals to binders with or without tabs, 3 hole punched, stapled or bound, the sky is the limit. On the top of all of that our prices are out of this planet, $0.025 per copy, lowest price online, period. We use latest technology Xerox laser equipment such as Docutech 6135 and 6180 with 600 dpi which is perfect for line and text copies plus your images and graphics will look good enough but if you want your images and graphics to look picture quality you should use our “Enhanced black printers” with 2400 dpi.</p>
+						<p><span>Why should you use our services</span></p>
+						<p>Because we do them cheaper than it would cost you if you would do them yourself, you don’t have to buy or lease a printer, you don’t have to deal with paper inventory, technicians, spending hours running the printer or even hiring someone to run it for you, we do all of that for less than it would cost you plus you have more time concentrating on your business. We can ship your orders free of charge for orders more than $150 or all orders of $250 or more will be delivered free of charge to your door anywhere in San Diego county. </p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="faqtab">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet maximus massa eu pharetra. Phasellus quis lorem nec mauris sagittis convallis. Duis at euismod nunc, tempor bibendum tellus. Aenean aliquam, elit at finibus convallis, elit eros euismod orci, sed scelerisque neque mauris eget arcu. Suspendisse rhoncus magna purus, eu fringilla massa lobortis a. Praesent lectus est, convallis vitae aliquam in, varius eu libero. Vestibulum vel ornare nulla, non dictum purus. Integer nisl mauris, cursus ac sem id, hendrerit interdum turpis. Cras condimentum dignissim arcu, eu gravida nisl rhoncus sed. </p>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="spectab">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet maximus massa eu pharetra. Phasellus quis lorem nec mauris sagittis convallis. Duis at euismod nunc, tempor bibendum tellus. Aenean aliquam, elit at finibus convallis, elit eros euismod orci, sed scelerisque neque mauris eget arcu. Suspendisse rhoncus magna purus, eu fringilla massa lobortis a. Praesent lectus est, convallis vitae aliquam in, varius eu libero. Vestibulum vel ornare nulla, non dictum purus. Integer nisl mauris, cursus ac sem id, hendrerit interdum turpis. Cras condimentum dignissim arcu, eu gravida nisl rhoncus sed. </p>
+						<p>Duis faucibus mollis sapien, sit amet eleifend velit feugiat eget. Aliquam erat volutpat. Cras diam arcu, dapibus sed dolor quis, bibendum blandit sapien. Aenean nec velit gravida, placerat lectus eu, pellentesque eros. Donec bibendum ante purus, sit amet vestibulum ligula vehicula ut. Nullam tortor nunc, porttitor non augue eget, convallis consequat velit. Cras facilisis lectus vitae mollis ultricies. Morbi at magna lobortis, tincidunt odio quis, feugiat erat. Nullam et porttitor velit. Suspendisse pharetra ligula eget ex euismod scelerisque. In sagittis consectetur magna, vel rhoncus velit imperdiet ut. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+					</div>
+				  </div>
+		  	</div>
+		  </div>
+        <div class="col-md-12 col-sm-12">
+          <div class="assistance_req">
+            <h2>Do you require assistance?</h2>
+            <ul>
+              <li> <img src="<?php echo base_url();?>assets/frontend/images/call-icon-sm.png" alt="icon"> Call Service <a href="#">123 456 7890</a> </li>
+              <li> <img src="<?php echo base_url();?>assets/frontend/images/envelope.png" alt="icon"> Email Service <a href="#">Email Form</a> </li>
+              <li> <img src="<?php echo base_url();?>assets/frontend/images/clock.png" alt="icon"> Phone Business <span>HoursMon-Fri 9:30AM-8PM EST</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-12">
+        <div class="mid_body_all clearfix">
+          <!-- <div class="col-md-12 col-sm-12">
+            <div class="order_color">
+              <h2> <?= $product_data[0]['product_name'];?></a> </h2>
+              <div class="row clearfix">
+                <div class="col-md-6">
+                  <div class="order_image"><img src="<?=base_url('uploads/products').'/'.$product_data[0]['product_image'];?>" alt=""></div>
+                </div>
+                <div class="col-md-6">
+                  <div class="order_text">
+                    <?//= $product_data[0]['description'];?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <div class="col-md-12 col-sm-12 pull-right">
+            
+            <div class="get_your_color">
+              <h2 class="getcolor">Get your instant price quote on black and white copies online:</h2>
+              <div class="printing_options">
+                <div class="print_opt_box">
+                  <h3>PRINTING OPTIONS</h3>
+                    <div class="row">
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong> How many copies would you like?</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <input type="number"  min="1" pattern="[0-9]*" value="1" id="no_copies" class="form-control get_input">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>How many pages are in your file?</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <input type="number"  min="1" pattern="[0-9]*" value="1" id="no_pages" class="form-control get_input">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Dimensions</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_printing_option0" class="get_option">
+                                      <option value="8.5x11"> 8.5x11</option>
+                                      <option value="8.5x14">8.5x14</option>
+                                      <option value="11x17">11x17</option>
+                                      <option value="4.25x5.5">4.25x5.5</option>
+                                      <option value="4.25x11">4.25x11</option>
+                                      <option value="8.5x5.5">8.5x5.5 </option>
+                                      <option value="8.5x7">8.5x7</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Paper Type</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_printing_option1" class="get_option">
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated copy paper white</option>
+                                        <option >20/50 lb white copy paper</option>
+                                        <option >24/60 lb white copy paper</option>
+                                        <option >28/70 lb white copy paper</option>
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated copy paper pastel color</option>
+                                        <option >20/50 lb blue paper</option>
+                                        <option >20/50 lb green paper</option>
+                                        <option >20/50 lb canary paper</option>
+                                        <option >20/50 lb orchid paper</option>
+                                        <option >20/50 lb ivory paper</option>
+                                        <option >20/50 lb golden rod paper</option>
+                                        <option >20/50 lb cherry paper</option>
+                                        <option >20/50 lb salmon paper</option>
+                                        <option >20/50 lb tan paper</option>
+                                        <option >20/50 lb gray paper</option>
+                                        <option >20/50 lb pink paper</option>
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated copy paper bright color</option>
+                                        <option >24/60 lb solar yellow paper</option>
+                                        <option >24/60 lb lift off lemon paper</option>
+                                        <option >24/60 lb lunar blue paper</option>
+                                        <option >24/60 lb celestial blue paper</option>
+                                        <option >24/60 lb rocket red paper</option>
+                                        <option >24/60 lb re-entry red paper</option>
+                                        <option >24/60 lb cosmic orange paper</option>
+                                        <option >24/60 lb orbit orange paper</option>
+                                        <option >24/60 lb galaxy gold paper</option>
+                                        <option >24/60 lb terra green paper</option>
+                                        <option >24/60 lb planetary purple paper</option>
+                                        <option >24/60 lb pulsar pink paper</option>
+                                        <option >24/60 lb gamma green paper</option>
+                                        <option >24/60 lb terestrial teal paper</option>
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated cardstock  pastel color</option>
+                                        <option >90 lb white cardstock</option>
+                                        <option >90 lb green cardstock</option>
+                                        <option >90 lb blue cardstock</option>
+                                        <option >90 lb canary cardstock</option>
+                                        <option >90 lb ivory cardstock</option>
+                                        <option >90 lb cherry cardstock</option>
+                                        <option >90 lb gold cardstock</option>
+                                        <option >90 lb salmon cardstock</option>
+                                        <option >90 lb gray cardstock</option>
+                                        <option >90 lb orchid cardstock</option>
+                                        <option >90 lb buff cardstock</option>
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated cardstock bright color</option>
+                                        <option >65 lb white cardstock</option>
+                                        <option >65 lb solar yellow cardstock</option>
+                                        <option >65 lb lift off lemon cardstock</option>
+                                        <option >65 lb galaxy gold cardstock</option>
+                                        <option >65 lb planetary purple cardstock</option>
+                                        <option >65 lb lunar blue cardstock</option>
+                                        <option >65 lb celestial blue cardstock</option>
+                                        <option >65 lb rocket red cardstock</option>
+                                        <option >65 lb re-entry red cardstock</option>
+                                        <option >65 lb orbit orange cardstock</option>
+                                        <option >65 lb cosmic orange cardstock</option>
+                                        <option >65 lb pulsar pink cardstock</option>
+                                        <option >65 lb terestrial teal cardstock</option>
+                                        <option >65 lb gamma green cardstock</option>
+                                        <option >65 lb terra green cardstock</option>
+                                      <option disabled style="font-weight:bold;color: white;background: #1660a8;">Uncoated cardstock  pastel color</option>
+                                        <option>110 lb blue cardstock</option>
+                                        <option>110 lb buff cardstock</option>
+                                        <option>110 lb canary cardstock</option>
+                                        <option>110 lb cherry cardstock</option>
+                                        <option>110 lb gray cardstock</option>
+                                        <option>110 lb green cardstock</option>
+                                        <option>110 lb ivory cardstock</option>
+                                        <option>110 lb salmon cardstock</option>
+                                        <option>110 lb white cardstock</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Number Of Sides</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_printing_option3" class="get_option">
+                                      <option value="1-sided">1-sided</option>
+                                      <option value="2-sided">2-sided</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix show_div" style="display:none;">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Sides</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <input type="radio" name="sides" value="head-to-head"><img src="<?=base_url()?>assets/frontend/images/Head to head.png" width="47px" height="38px">Head-to-Head
+                                  <input type="radio" name="sides" value="head-to-toe"><img src="<?=base_url()?>assets/frontend/images/Head to Toe.png" width="47px" height="38px">Head-to-Toe
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix show_div" style="display:none;">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Orientation</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <input type="radio" name="sides" value="Landscape">&nbsp;<img src="<?=base_url()?>assets/frontend/images/landscape.png">&nbsp;Landscape&nbsp;&nbsp;
+                                  <input type="radio" name="sides" value="Portrait">&nbsp;<img src="<?=base_url()?>assets/frontend/images/portrait.png">&nbsp;Portrait
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <br>
+                <br>
+                <div class="print_opt_box">
+                  <h3>FINISHING OPTIONS</h3>
+                    <div class="row">
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong> Collation  <a href="javascript:void(0)" id="collation_hover">(?)</a></strong> </label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_finishing_option9" class="get_option">
+                                      <option value="">Select</option>
+                                      <option value="collated">collated</option>
+                                      <option value="uncollated">uncollated</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <table id="collation_info" class="hover_table" style="opacity: 1; display: none; position: absolute;">
+                        <tbody>
+                          <tr>
+                                <td class="corner topleft"></td>
+                                <td class="top"></td>
+                                <td class="corner topright"></td>
+                          </tr>
+                  
+                          <tr>
+                                <td class="left"></td>
+                                <td class="body">
+                                    <img src="https://d1luacljur02br.cloudfront.net/assets/product-pages/collation-bfbbbe99e853102606b0371aeaf245dead6908f8e401acc69e2aa1f01d611e27.png">
+                                </td>
+                                <td class="right"></td>    
+                          </tr>
+                  
+                          <tr>
+                                <td class="corner bottomleft"></td>
+                                <td class="bottom"></td>
+                                <td class="corner bottomright"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Divider sheets  <a href="javascript:void(0)" id="divider_sheet_hover">(?)</a></strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_finishing_option0" class="get_option">
+                                      <option value="">Select</option>
+                                      <option value="add-divider-sheets">add divider sheets</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <table id="divider_sheet_info" class="hover_table" style="opacity: 1;display: none; position: absolute;">
+                        <tbody>
+                          <tr>
+                            <td class="corner topleft"></td>
+                            <td class="top"></td>
+                            <td class="corner topright"></td>
+                          </tr>
+                          <tr>
+                            <td class="left"></td>
+                            <td class="body">
+                                <h3 style="font-size:16px;">Divider Sheets</h3>
+                                <br>
+                                <strong style="text-decoration:underline;">Where are divider sheets placed?</strong>
+                                <p>- A divider sheet is placed between each document/copy. </p>
+                                <p>- The number of documents/copies is selected in the</p>
+                                <p>&nbsp;&nbsp;"How many copies would you like?" section of the quoter</p>
+                                <p>- <i>Divider sheets will <strong style="text-decoration:underline;">NOT</strong> be put inside a document/copy, </i></p>
+                                <p>&nbsp;&nbsp;they will only be put between documents/copies.</p>
+                              <br>
+                                <img src="https://d1luacljur02br.cloudfront.net/assets/product-pages/divider-b198ef8139e67a80cb592976ffa1f406520145360b60089348508d5a983dae47.png">
+                            </td>
+                            <td class="right"></td>
+                          </tr>
+                          <tr>
+                            <td class="corner bottomleft"></td>
+                            <td class="bottom"></td>
+                            <td class="corner bottomright"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Stapling</strong></label>
+                              <br\>
+                              <p style="color: red;">(Only collated sheets can be stapled)</p>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_finishing_option1" class="get_option">
+                                      <option value="">Select</option>
+                                      <option value="top-left">top left staple</option>
+                                      <option value="2-staple">2 staples on the spine </option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>Folding</strong></label>
+                              <br\>
+                              <p style="color: red;">(Only uncollated sheets can be folded <strong>with minimum of $10</strong>)</p>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_finishing_option4" class="get_option">
+                                      <option value="">Select</option>
+                                      <option value="half-fold">half fold</option>
+                                      <option value="tri-fold">tri fold</option>
+                                      <option value="z-fold">z fold</option>
+                                      <option value="tri-fold-type-out">Tri fold type out (1-sided)</option>
+                                      <option value="tri-fold-type-in">Tri fold type in (1-sided)</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="opt_sel clearfix">
+                          <div class="col-md-5">
+                              <label class="left_pan_taxt"><strong>3 hole punch</strong></label>
+                          </div>
+                          <div class="col-md-7">
+                              <div class="input_fld">
+                                  <select id="get_finishing_option27" class="get_option">
+                                      <option value="">Select</option>
+                                      <option value="add-3-holepunch">add 3 holepunch</option>
+                                  </select>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" id="product_id" value="<?php if(isset($product_data)) echo $product_data[0]['product_id'];?>">
+              <div class="printing_delivery">
+                <h2>RUSH SERVICE AVAILABLE. GET IT AS EARLY AS TUESDAY,<br>
+                  OCT. 30TH.<br>
+                  Order in the next 7 hr 5 min.<br>
+                  You can change your delivery date in the shopping cart. </h2>
+              </div>
+              <div class="price_box clearfix">
+                <span class="price_head">Unit Price</span>
+                <span class="priceA">$<span class="price">0.00</span></span>
+              </div>
+              <div class="price_box clearfix"> 
+                <span class="price_head">Subtotal:</span>
+                <span class="priceA">$<span class="total">0.00</span></span>
+              </div>
+            </div>
+            <div class="button_area">
+              <span class="pull-left" style="font-weight:700;font-size:20px;color:red;">* We have a $25 minimum charge</span>
+              <!-- <form id="add_cart_from" action="<?php //echo base_url() .'product-image-upload/'.$product_data[0]['product_slug'] ;?>"  method="post"> -->
+              <form id="add_cart_from" action="<?php echo base_url() .'product-image-upload/'.$product_data[0]['product_slug'] ;?>"  method="post">
+                  <button type="submit" class="nextstep" disabled="false">Next Step</button>
+              </form>
+              <div style="margin-top: 10px;">Select the printing and finishing combination above before proceeding</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $("#divider_sheet_hover").mouseover(function(){
+    $("#divider_sheet_info").show();
+  });
+  $("#divider_sheet_hover").mouseout(function(){
+    $("#divider_sheet_info").hide();
+  });
+  $("#collation_hover").mouseover(function(){
+    $("#collation_info").show();
+  });
+  $("#collation_hover").mouseout(function(){
+    $("#collation_info").hide();
+  });
+</script>

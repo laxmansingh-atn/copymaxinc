@@ -1,0 +1,8 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 ..
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 error_404.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 error_db.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 error_exception.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 error_general.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 error_php.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 index.html

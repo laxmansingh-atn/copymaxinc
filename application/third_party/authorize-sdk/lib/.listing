@@ -1,0 +1,14 @@
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Jun 10 11:04 .
+drwxr-xr-x    8 sandiegoco sandiegoco       4096 Jun 10 11:04 ..
+-rw-r--r--    1 sandiegoco sandiegoco      17990 Jun 10 11:04 AuthorizeNetAIM.php
+-rw-r--r--    1 sandiegoco sandiegoco       4425 Jun 10 11:04 AuthorizeNetARB.php
+-rw-r--r--    1 sandiegoco sandiegoco      17801 Jun 10 11:04 AuthorizeNetCIM.php
+-rw-r--r--    1 sandiegoco sandiegoco       8533 Jun 10 11:04 AuthorizeNetCP.php
+-rw-r--r--    1 sandiegoco sandiegoco       9309 Jun 10 11:04 AuthorizeNetDPM.php
+-rw-r--r--    1 sandiegoco sandiegoco       6865 Jun 10 11:04 AuthorizeNetSIM.php
+-rw-r--r--    1 sandiegoco sandiegoco       2794 Jun 10 11:04 AuthorizeNetSOAP.php
+-rw-r--r--    1 sandiegoco sandiegoco       6794 Jun 10 11:04 AuthorizeNetTD.php
+-rw-r--r--    1 sandiegoco sandiegoco       6612 Jun 10 11:04 README-DeprecatedSamples.md
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Jun 10 11:04 net
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Jun 10 11:04 shared
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Jun 10 11:04 ssl

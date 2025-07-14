@@ -1,0 +1,12 @@
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Feb 26  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco      33066 Mar  1  2019 fullcalendar.css
+-rw-r--r--    1 sandiegoco sandiegoco     462743 Mar  1  2019 fullcalendar.js
+-rw-r--r--    1 sandiegoco sandiegoco      15714 Mar  1  2019 fullcalendar.min.css
+-rw-r--r--    1 sandiegoco sandiegoco     172361 Mar  1  2019 fullcalendar.min.js
+-rw-r--r--    1 sandiegoco sandiegoco       5566 Mar  1  2019 fullcalendar.print.css
+-rw-r--r--    1 sandiegoco sandiegoco       1901 Mar  1  2019 fullcalendar.print.min.css
+-rw-r--r--    1 sandiegoco sandiegoco       7002 Mar  1  2019 gcal.js
+-rw-r--r--    1 sandiegoco sandiegoco       3116 Mar  1  2019 gcal.min.js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 locale
+-rw-r--r--    1 sandiegoco sandiegoco     163666 Mar  1  2019 locale-all.js

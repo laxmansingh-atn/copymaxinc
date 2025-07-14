@@ -1,0 +1,92 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2024-05-14 12:04:46 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 174
+ERROR - 2024-05-14 12:04:46 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 175
+ERROR - 2024-05-14 12:04:46 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 198
+ERROR - 2024-05-14 12:04:46 --> Severity: Warning --> A non-numeric value encountered /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Index.php 221
+ERROR - 2024-05-14 12:06:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:06:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:38:07 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:39:10 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:43:35 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:45:15 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:46:47 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:50:00 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 12:55:07 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 13:21:47 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 13:38:46 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 13:42:13 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 13:47:24 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 14:43:30 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 14:49:14 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 15:51:05 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:26:23 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:32:56 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:32:57 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:47:23 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:51:16 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:53:21 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:53:22 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:55:17 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 16:59:13 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:15:24 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:17:16 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:17:25 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:52:49 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:52:49 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:58:47 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 17:59:42 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:12:25 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:16:33 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:16:49 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:44:07 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:44:08 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 18:57:34 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 19:52:25 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 19:52:25 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 19:54:31 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 19:54:32 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:00:15 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:00:17 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:13:26 --> Severity: Warning --> Invalid argument supplied for foreach() /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Cart.php 550
+ERROR - 2024-05-14 20:13:27 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:14:09 --> Severity: Warning --> Invalid argument supplied for foreach() /home/q7wmchdn7d8u/public_html/copymaxinc.com/application/modules/welcome/controllers/Cart.php 550
+ERROR - 2024-05-14 20:14:12 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:52:32 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:52:32 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:52:32 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:52:35 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 20:54:30 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:01:18 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:01:19 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:01:20 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:13:35 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:13:36 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:13:36 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:13:38 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:13:39 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:17:28 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:39:32 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 21:39:33 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:07:51 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:12:50 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:16:08 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:16:08 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 22:31:51 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:19:26 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:19:29 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:32:07 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:50:02 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:50:03 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:51:26 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:52:29 --> 404 Page Not Found: /index
+ERROR - 2024-05-14 23:58:05 --> 404 Page Not Found: /index

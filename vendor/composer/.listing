@@ -1,0 +1,11 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 May 22 02:46 .
+drwxr-xr-x    8 sandiegoco sandiegoco       4096 May 22 02:46 ..
+-rw-r--r--    1 sandiegoco sandiegoco      13422 May 22 02:46 ClassLoader.php
+-rw-r--r--    1 sandiegoco sandiegoco       1070 May 22 02:46 LICENSE
+-rw-r--r--    1 sandiegoco sandiegoco        147 May 22 02:46 autoload_classmap.php
+-rw-r--r--    1 sandiegoco sandiegoco        558 May 22 02:46 autoload_files.php
+-rw-r--r--    1 sandiegoco sandiegoco        231 May 22 02:46 autoload_namespaces.php
+-rw-r--r--    1 sandiegoco sandiegoco        560 May 22 02:46 autoload_psr4.php
+-rw-r--r--    1 sandiegoco sandiegoco       2414 May 22 02:46 autoload_real.php
+-rw-r--r--    1 sandiegoco sandiegoco       2522 May 22 02:46 autoload_static.php
+-rw-r--r--    1 sandiegoco sandiegoco      13248 May 22 02:46 installed.json

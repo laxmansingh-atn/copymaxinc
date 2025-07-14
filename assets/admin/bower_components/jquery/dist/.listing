@@ -1,0 +1,9 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Feb 26  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco      11197 Mar  1  2019 core.js
+-rw-r--r--    1 sandiegoco sandiegoco     268039 Mar  1  2019 jquery.js
+-rw-r--r--    1 sandiegoco sandiegoco      86659 Mar  1  2019 jquery.min.js
+-rw-r--r--    1 sandiegoco sandiegoco     131666 Mar  1  2019 jquery.min.map
+-rw-r--r--    1 sandiegoco sandiegoco     215256 Mar  1  2019 jquery.slim.js
+-rw-r--r--    1 sandiegoco sandiegoco      69597 Mar  1  2019 jquery.slim.min.js
+-rw-r--r--    1 sandiegoco sandiegoco     104583 Mar  1  2019 jquery.slim.min.map

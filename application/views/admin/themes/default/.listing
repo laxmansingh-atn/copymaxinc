@@ -1,0 +1,14 @@
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Sep  3 07:51 .
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Feb 26  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco        144 Jun 21 11:15 content.php
+-rw-r--r--    1 sandiegoco sandiegoco      34211 Jun 21 11:15 footer.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 footer_12_03_18.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 footer_12_05_18.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 footer_12_12_18.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 footer_20_12_18.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 footer_24_12_18.php
+-rw-r--r--    1 sandiegoco sandiegoco      15196 Jun 21 11:15 header.php
+-rw-r--r--    1 sandiegoco sandiegoco          0 Jun 21 11:15 header_11_30_18.php
+-rw-r--r--    1 sandiegoco sandiegoco        351 Jun 21 11:15 layout.php
+-rw-r--r--    1 sandiegoco sandiegoco       2732 Jun 21 11:15 products.php
+-rw-r--r--    1 sandiegoco sandiegoco       8290 Sep  3 07:51 sidebar.php

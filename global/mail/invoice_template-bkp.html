@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice</title>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- <link rel="stylesheet" href="sass/main.css" media="screen" charset="utf-8"/> -->
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="content-type" content="text-html; charset=utf-8"> 
+
+
+</head>
+
+<body>
+	<header style="width: 100%;height:auto;float: left;position: relative;"> 
+			<div class="company_logo" style="text-align:center;width: 200px;margin: 0 auto;position: absolute;left: 0;right: 0;">
+					
+					<img style="width: 200px;" class="logo" src="{LOGO}" alt="">
+							
+			</div>
+		<div style="width: 50%;height:auto;float: left;">
+				<div class="company-address" style="max-width: 150px;line-height: 1.7em;">
+						<h2 class="title" style="color: #1660a8;font-weight: 400;font-size: 1.5em;text-transform: uppercase;">{COMPANY_NAME}</h2>
+						<p style="display: block;">Pickup At :
+						{COMPANY_ADDRESS}
+						</p>
+						<p style="display: block;">{COMPANY_PHONE}</p>
+							<!--<p style="display: block;">{COMPANY_EMAIL}</p>-->							<a href="mailto:{COMPANY_EMAIL_NEW}">{COMPANY_EMAIL}</a>
+					</div>
+					
+						<div class="client left" style="line-height: 20px;">
+								<p style="display: block;">INVOICE TO:</p>
+								<p class="name" style="color: #1660a8;display: block;">{CUSTOMER_NAME}</p>
+								<p >{CUSTOMER_MOBILE}</p>
+								<a href="mailto:{CUSTOMER_EMAIL}">{CUSTOMER_EMAIL}</a>
+							</div>
+				
+
+
+		
+		</div>
+		<div style="width: 50%;height:auto;float: right;">
+				<div class="data right" style="text-align: right;">
+						<div class="title" style="margin-bottom: 15px;color: #1660a8;font-size: 3em;font-weight: 400;text-transform: uppercase;">Invoice </div>
+						<div class="date">
+							INVOICE No : {INVOICE_NUMBER}
+						</div>
+						<p class="name" style="color: #1660a8;">Billing Address :</p>
+						<p>{BILLING_ADDRESS}</p>
+						<p class="name" style="color: #1660a8;">Shipping Address :</p>
+						<p>{SHIPPING_ADDRESS}</p>
+						<p class="name" style="color: #1660a8;">Special Instructions :</p>
+						<p>{SPECIAL_INSTRUCTION}</p>
+						<p class="name" style="color: #1660a8;">Delivery Date & Time :</p>
+						<p>{DELIVERY_DATE_TIME}</p>
+						<p class="name" style="color: #1660a8;">Shipping Type :</p>
+						<p>{SHIPPING_TYPE}</p>
+						<p class="name" style="color: #1660a8;">Shipping Service Type :</p>
+						<p>{SHIPPING_SERVICE_TYPE}</p>
+						
+						
+					</div>
+		
+		</div>
+	</header>
+	<!-- <header class="clearfix">
+			<div class="company_logo" style="text-align:center;width: 200px;margin: 0 auto;position: absolute;left: 0;right: 0;">
+					
+					<img class="logo" src="{LOGO}" alt="">
+							
+				</div>
+			
+			<div class="company-address" style="max-width: 150px;line-height: 1.7em;">
+				<h2 class="title" style="color: #1660a8;font-weight: 400;font-size: 1.5em;text-transform: uppercase;">{COMPANY_NAME}</h2>
+				<p style="display: block;">Pickup At :
+				{COMPANY_ADDRESS}
+				</p>
+				<p style="display: block;">{COMPANY_PHONE}</p>
+					<p style="display: block;">{COMPANY_EMAIL}</p>
+			</div>
+			
+		
+	</header> -->
+
+	<section style="position: relative;">
+			<!-- <div class="company_logo" style="text-align:center;width: 200px;margin: 0 auto;position: absolute;left: 0;right: 0;">
+					
+					<img class="logo" src="{LOGO}" alt="">
+							
+				</div> -->
+				
+			<!-- <div class="company-address" style="max-width: 150px;line-height: 1.7em;">
+					<h2 class="title" style="color: #1660a8;font-weight: 400;font-size: 1.5em;text-transform: uppercase;">{COMPANY_NAME}</h2>
+					<p style="display: block;">Pickup At :
+					{COMPANY_ADDRESS}
+					</p>
+					<p style="display: block;">{COMPANY_PHONE}</p>
+						<p style="display: block;">{COMPANY_EMAIL}</p>
+				</div> -->
+	
+			<!-- <div class="details clearfix" style="margin-bottom: 55px;">
+				<div class="client left" style="line-height: 20px;">
+					<p style="display: block;">INVOICE TO:</p>
+					<p class="name" style="color: #1660a8;display: block;">{CUSTOMER_NAME}</p>
+					<p >{CUSTOMER_MOBILE}</p>
+					<a href="mailto:{CUSTOMER_EMAIL}">{CUSTOMER_EMAIL}</a>
+				</div>
+				<div class="data right" style="text-align: right;">
+					<div class="title" style="margin-bottom: 15px;color: #1660a8;font-size: 3em;font-weight: 400;text-transform: uppercase;">Invoice </div>
+					<div class="date">
+						INVOICE No : {INVOICE_NUMBER}
+					</div>
+					<p class="name" style="color: #1660a8;">Billing Address :</p>
+					<p>{BILLING_ADDRESS}</p>
+					<p class="name" style="color: #1660a8;">Shipping Address :</p>
+					<p>{SHIPPING_ADDRESS}</p>
+					<p class="name" style="color: #1660a8;">Special Instructions :</p>
+					<p>{SPECIAL_INSTRUCTION}</p>
+					<p class="name" style="color: #1660a8;">Delivery Date & Time :</p>
+					<p>{DELIVERY_DATE_TIME}</p>
+					<p class="name" style="color: #1660a8;">Shipping Type :</p>
+					<p>{SHIPPING_TYPE}</p>
+					
+					
+				</div>
+			</div> -->
+			<div class="clearfix"></div>
+			<table border="0" cellspacing="0" cellpadding="0" width="100%">
+				<thead>
+					<tr>
+						<th class="desc" style="text-align: left;width: 30%;padding: 5px 10px;background: #1660a8;border-bottom: 5px solid #FFFFFF;border-right: 4px solid #FFFFFF;color: white;font-weight: 400;text-transform: uppercase;">Printing Item</th>
+						<th class="desc" style="text-align: left;width: 30%;padding: 5px 10px;background: #1660a8;border-bottom: 5px solid #FFFFFF;border-right: 4px solid #FFFFFF;color: white;font-weight: 400;text-transform: uppercase;">Finishing Item</th>
+						<th class="unit" style="text-align: right;width: 15%;padding: 5px 10px;background: #1660a8;border-bottom: 5px solid #FFFFFF;border-right: 4px solid #FFFFFF;color: white;font-weight: 400;text-transform: uppercase;">Pages</th>
+						<th class="unit" style="text-align: right;width: 15%;padding: 5px 10px;background: #1660a8;border-bottom: 5px solid #FFFFFF;border-right: 4px solid #FFFFFF;color: white;font-weight: 400;text-transform: uppercase;">Copies</th>
+						<th class="total" style="text-align: right;width: 15%;padding: 5px 10px;background: #1660a8;border-bottom: 5px solid #FFFFFF;border-right: 4px solid #FFFFFF;color: white;font-weight: 400;text-transform: uppercase;">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					{TABLE_BODY}
+					
+				</tbody>
+			</table>
+			<!-- <div class="no-break">
+				<table class="grand-total" border="1">
+					<tbody>
+						{TOTAL_BODY}
+					</tbody>
+				</table>
+			</div> -->
+		
+	</section>
+
+	<footer>
+		
+			<div class="thanks" style="margin-bottom: 40px;color: #1660a8;font-size: 1.16666666666667em;font-weight: 600;text-align: center">Thank you!</div>
+			
+			<div class="end" style="padding-top: 5px;border-top: 2px solid #1660a8;text-align: center;">
+					<p>{COMPANY_NAME}</p>
+					<p>{COMPANY_PHONE}</p>
+					<!--<p>{COMPANY_EMAIL}</p>-->
+			</div>
+		
+	</footer>
+
+</body>
+
+</html>

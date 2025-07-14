@@ -1,0 +1,15 @@
+drwxr-xr-x    9 sandiegoco sandiegoco       4096 Dec  6  2018 .
+drwxr-xr-x    5 sandiegoco sandiegoco       4096 Feb 26  2019 ..
+-rw-r--r--    1 sandiegoco sandiegoco      22853 Mar  1  2019 ajax_calls.php
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 config
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 css
+-rw-r--r--    1 sandiegoco sandiegoco      49964 Mar  1  2019 dialog.php
+-rw-r--r--    1 sandiegoco sandiegoco      15482 Mar  1  2019 execute.php
+-rw-r--r--    1 sandiegoco sandiegoco       3727 Mar  1  2019 force_download.php
+drwxr-xr-x    4 sandiegoco sandiegoco       4096 Dec  6  2018 img
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 include
+drwxr-xr-x    3 sandiegoco sandiegoco       4096 Dec  6  2018 js
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 lang
+-rw-r--r--    1 sandiegoco sandiegoco       2068 Mar  1  2019 plugin.min.js
+-rw-r--r--    1 sandiegoco sandiegoco       8080 Mar  1  2019 upload.php
+drwxr-xr-x    2 sandiegoco sandiegoco       4096 Dec  6  2018 uploader
