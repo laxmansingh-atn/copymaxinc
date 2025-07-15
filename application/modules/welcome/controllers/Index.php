@@ -40,7 +40,7 @@ class Index extends MY_Controller
     public function testEmail()
     {
         $data = [];
-        $data['to'] = 'laxmansingh.atn@gmail.com';
+        $data['to'] = 'prashant.jod@gmail.com';
         $data['subject'] = 'Test Email';
         $data['message'] = 'Test Email Body Message';
         $status = sendMail($data);

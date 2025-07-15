@@ -28,3 +28,29 @@ ERROR - 2025-07-15 15:36:13 --> Severity: error --> Exception: Call to undefined
 ERROR - 2025-07-15 15:37:00 --> Severity: Warning --> stream_socket_enable_crypto(): SSL operation failed with code 1. OpenSSL Error messages:
 error:0A00010B:SSL routines::wrong version number /Users/prashantshukla/Sites/copymax-ci/system/libraries/Email.php 2098
 ERROR - 2025-07-15 15:37:01 --> Severity: Warning --> Uninitialized string offset 3 /Users/prashantshukla/Sites/copymax-ci/system/libraries/Email.php 2317
+ERROR - 2025-07-15 15:47:07 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:07 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:07 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:08 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:09 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> 404 Page Not Found: /index
+ERROR - 2025-07-15 15:47:10 --> Severity: Warning --> Trying to access array offset on value of type null /Users/prashantshukla/Sites/copymax-ci/application/modules/welcome/controllers/Index.php 218
+ERROR - 2025-07-15 15:47:39 --> Severity: Warning --> Trying to access array offset on value of type null /Users/prashantshukla/Sites/copymax-ci/application/modules/welcome/controllers/Index.php 218
