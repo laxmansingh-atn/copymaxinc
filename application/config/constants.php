@@ -114,14 +114,26 @@ defined('TBL_ORDER_DETAIL') OR define('TBL_ORDER_DETAIL', 'tbl_order_details'); 
 
 defined('SALES_TAX_PER') OR define('SALES_TAX_PER', '0.0825'); //
 
+
+// This mail was directly sent by mail.copymaxinc.com.
+// SMTP host: mail.copymaxinc.com
+// Port: 587
+// Use SLL: False
+// Use Authentication: True
+// Authentication name: wecare@copymaxinc.com
+// Authentication password: m3ZP)1Xzz+Ha
+// Email from: wecare@copymaxinc.com
+// Email to: prashant.jod@gmail.com
+// This service is provided by https://smtper.net
+
 defined('EMAIL_SMTP_PROTOCOL') OR define('EMAIL_SMTP_PROTOCOL', 'smtp');
 defined('EMAIL_SMTP_HOST') OR define('EMAIL_SMTP_HOST', 'mail.copymaxinc.com'); //ssl://copymaxinc.com
-defined('EMAIL_SMTP_PORT') OR define('EMAIL_SMTP_PORT', 465);
-defined('EMAIL_SMTP_USER') OR define('EMAIL_SMTP_USER', 'info@copymaxinc.com');
-defined('EMAIL_SMTP_FROM_EMAIL') OR define('EMAIL_SMTP_FROM_EMAIL', 'info@copymaxinc.com');
+defined('EMAIL_SMTP_PORT') OR define('EMAIL_SMTP_PORT', 587);
+defined('EMAIL_SMTP_USER') OR define('EMAIL_SMTP_USER', 'wecare@copymaxinc.com');
+defined('EMAIL_SMTP_FROM_EMAIL') OR define('EMAIL_SMTP_FROM_EMAIL', 'wecare@copymaxinc.com');
 defined('EMAIL_SMTP_FROM_NAME') OR define('EMAIL_SMTP_FROM_NAME', 'Copymax Inc.');
-defined('EMAIL_SMTP_PASSWORD') OR define('EMAIL_SMTP_PASSWORD', 'S^0Ha@~mt{SZ');
-defined('EMAIL_SMTP_CRYPTO') OR define('EMAIL_SMTP_CRYPTO', 'ssl'); //ssl,tls;
+defined('EMAIL_SMTP_PASSWORD') OR define('EMAIL_SMTP_PASSWORD', 'm3ZP)1Xzz+Ha');
+defined('EMAIL_SMTP_CRYPTO') OR define('EMAIL_SMTP_CRYPTO', 'tls'); //ssl,tls;
 defined('EMAIL_SMTP_VALIDATION') OR define('EMAIL_SMTP_VALIDATION', true);
 defined('EMAIL_SMTP_CHARSET') OR define('EMAIL_SMTP_CHARSET', 'utf-8');
 defined('EMAIL_SMTP_NEWLINE') OR define('EMAIL_SMTP_NEWLINE', '\r\n');

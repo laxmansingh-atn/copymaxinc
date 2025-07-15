@@ -54,7 +54,7 @@ if (!function_exists('sendMail')) {
         if ($CI->email->send()) {
             return true;
         } else {
-            dd($email->print_debugger());
+            dd($CI->email->print_debugger());
             return false;
         }
     }

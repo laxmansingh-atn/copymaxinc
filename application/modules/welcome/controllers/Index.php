@@ -31,7 +31,9 @@ class Index extends MY_Controller
                 $lang_value = $a_lang[$lang_code];
             }
         }
-        $this->testEmail();
+        if(isset($_GET['email_test']) && $_GET['email_test'] == 'email_test'){
+            $this->testEmail();
+        }
     }
 
     //Test EMail
@@ -4328,7 +4330,6 @@ class Index extends MY_Controller
             return false;
         }
     }
-
 
     private function sendMailContactUs($data, $image_full_path = null, $invoice_path = null)
     {
