@@ -17,6 +17,15 @@ if (!function_exists('sendMail')) {
 			$mail->Port       = EMAIL_SMTP_PORT;
 			$mail->setFrom(EMAIL_SMTP_FROM_EMAIL, EMAIL_SMTP_FROM_NAME);
 
+            //For Testing Purpose only
+            $mail->Host       = 'smtp.gmail.com';
+            $mail->SMTPAuth   = true;
+            $mail->Username   = 'laxmansingh.atn@gmail.com';
+            $mail->Password   = 'krtfuzadtpefgvaa';          // Your Gmail App Password
+            $mail->SMTPSecure = 'tls';
+            $mail->Port       = 587;
+			$mail->setFrom('laxmansingh.atn@gmail.com', EMAIL_SMTP_FROM_NAME);
+
 			// Main recipient
 			$mail->addAddress($data['to']);
 
