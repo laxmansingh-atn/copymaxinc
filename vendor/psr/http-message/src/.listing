@@ -1,9 +1,0 @@
-drwxr-xr-x    2 sandiegoco sandiegoco       4096 May 22 02:46 .
-drwxr-xr-x    3 sandiegoco sandiegoco       4096 May 22 02:46 ..
--rw-r--r--    1 sandiegoco sandiegoco       6910 May 22 02:46 MessageInterface.php
--rw-r--r--    1 sandiegoco sandiegoco       4814 May 22 02:46 RequestInterface.php
--rw-r--r--    1 sandiegoco sandiegoco       2591 May 22 02:46 ResponseInterface.php
--rw-r--r--    1 sandiegoco sandiegoco      10098 May 22 02:46 ServerRequestInterface.php
--rw-r--r--    1 sandiegoco sandiegoco       4746 May 22 02:46 StreamInterface.php
--rw-r--r--    1 sandiegoco sandiegoco       4689 May 22 02:46 UploadedFileInterface.php
--rw-r--r--    1 sandiegoco sandiegoco      12607 May 22 02:46 UriInterface.php

@@ -1,8 +1,0 @@
-drwxr-xr-x    3 sandiegoco sandiegoco       4096 May 22 02:46 .
-drwxr-xr-x    5 sandiegoco sandiegoco       4096 May 22 02:46 ..
--rw-r--r--    1 sandiegoco sandiegoco       1130 May 22 02:46 CHANGELOG.md
--rw-r--r--    1 sandiegoco sandiegoco       1116 May 22 02:46 LICENSE
--rw-r--r--    1 sandiegoco sandiegoco        189 May 22 02:46 Makefile
--rw-r--r--    1 sandiegoco sandiegoco      15300 May 22 02:46 README.md
--rw-r--r--    1 sandiegoco sandiegoco        786 May 22 02:46 composer.json
-drwxr-xr-x    2 sandiegoco sandiegoco       4096 May 22 02:46 src

@@ -40,7 +40,7 @@ class Index extends MY_Controller
     public function testEmail()
     {
         $data = [];
-        $data['to'] = 'prashant.jod@gmail.com';
+        $data['to'] = 'laxmansingh.atn@gmail.com';
         $data['subject'] = 'Test Email';
         $data['message'] = 'Test Email Body Message';
         $status = sendMail($data);
@@ -913,7 +913,7 @@ class Index extends MY_Controller
             $data['message'] = "<p><strong>Name:</strong>" . $_POST['from_name'] . "</p><p><strong>Phone No:</strong>" . $_POST['from_phone_no'] . "</p><p><Strong>Email From</strong>: " . $_POST['from_email'] . "</p><p><strong>Message:</strong>" . $_POST['message'] . "</p>";
             $data['from'] = $_POST['from_email'];
 
-            $this->sendContactUsMail($data);
+            sendMail($data);
 
             $name  = $_POST['from_name'];
             $email = $_POST['from_email'];
@@ -985,7 +985,7 @@ class Index extends MY_Controller
             $data['message']    = $message;
             $data['from']       = "query@copymaxinc.com";
 
-            $is_sendmail        = $this->sendContactUsMail($data);
+            $is_sendmail        = sendMail($data);
             if ($is_sendmail) {
                 $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for contacting us.');
             } else {
@@ -1098,7 +1098,7 @@ class Index extends MY_Controller
             $data['message'] = $message;
             $data['from'] = EMAIL_SMTP_FROM_EMAIL;
 
-            if ($this->sendMailContactUs($data)) {
+            if (sendMail($data)) {
                 $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for contacting us.');
             } else {
                 $this->session->set_flashdata('error_message', 'Something Went Wrong.');
@@ -1123,7 +1123,7 @@ class Index extends MY_Controller
             $data['subject'] = 'Copymax Inc-Contact Us';
             $data['message'] = $mail_temp;
             $data['from'] = EMAIL_SMTP_FROM_EMAIL;
-            $this->sendMailContactUs($data);
+            sendMail($data);
         }
 
         redirect('welcome/index/contact_us', 'refresh');
@@ -1146,7 +1146,7 @@ class Index extends MY_Controller
         $data['subject'] = 'Newsletter Signup';
         $data['message'] = "<p> A new Newsletter sign Up from <a href='https://www.copymaxinc.com/'>https://www.copymaxinc.com/</a></p>			<p>Email Id: $newsletter_email</p>	 <p>Name : $newsletter_name</p>	";
         $data['from'] = EMAIL_SMTP_FROM_EMAIL;
-        $this->sendMailContactUs($data);
+        sendMail($data);
         $this->session->set_flashdata('success_message_newsletter', 'Newsletter signup request submitted successfully');
         if ($_REQUEST['redirect_url']) {
             redirect($_REQUEST['redirect_url']);
@@ -1280,7 +1280,7 @@ class Index extends MY_Controller
                         $data['subject'] = 'Register with Copymax Inc.';
                         $data['message'] = $message;
 
-                        $this->sendMail($data);
+                        sendMail($data);
                         $this->session->set_flashdata('success_message', '<strong>Thank You</strong> for registering with  us.');
                         /* end mail templete */
 
@@ -1540,7 +1540,7 @@ class Index extends MY_Controller
                         $data['subject'] = 'Register with Copymax Inc.';
                         $data['message'] = $message;
 
-                        $this->sendMail($data);
+                        sendMail($data);
 
                         //-------------------------------------------------Auto Login-------------------------------------//
                         $remember = false;
@@ -2607,11 +2607,11 @@ class Index extends MY_Controller
                             $data['message'] = $mail_temp;
                             $data['from'] = EMAIL_SMTP_FROM_EMAIL;
 
-                            $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                            sendMail($data, $images_full_path, $invoice_path = null);
                             $data['to'] = "copymaxinc@gmail.com";
                             //$data['to'] = "jeanne.west3426@gmail.com"; //sandy 19-03-2021
 
-                            $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                            sendMail($data, $images_full_path, $invoice_path = null);
 
                             /*if (!empty($images_full_path)) {
 								if(!file_exists('uploads/order_uploads/'. $order_no_id)) {										
@@ -2934,11 +2934,11 @@ class Index extends MY_Controller
                 $data['from'] = EMAIL_SMTP_FROM_EMAIL;
                 //echo $mail_temp;die;
 
-                $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                sendMail($data, $images_full_path, $invoice_path = null);
                 $data['to'] = "copymaxinc@gmail.com";
                 //$data['to'] = "jeanne.west3426@gmail.com"; //sandy 19-03-2021
                 /* cash mail */
-                $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                sendMail($data, $images_full_path, $invoice_path = null);
 
                 /*if (!empty($images_full_path)) {
 					 if(!file_exists('uploads/order_uploads/'. $order_no_id)) {
@@ -3408,11 +3408,11 @@ class Index extends MY_Controller
                 $data['from'] = EMAIL_SMTP_FROM_EMAIL;
                 //echo $mail_temp;die;
 
-                $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                sendMail($data, $images_full_path, $invoice_path = null);
                 $data['to'] = "copymaxinc@gmail.com";
                 //$data['to'] = "jeanne.west3426@gmail.com"; //sandy 19-03-2021
                 /* cash mail */
-                $MailStatus = $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                $MailStatus = sendMail($data, $images_full_path, $invoice_path = null);
                 // dd($MailStatus);
                 /*if (!empty($images_full_path)) {
 					 if(!file_exists('uploads/order_uploads/'. $order_no_id)) {
@@ -3742,7 +3742,7 @@ class Index extends MY_Controller
             $data['from'] = EMAIL_SMTP_FROM_EMAIL;
             //echo $mail_temp;die;
 
-            $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+            sendMail($data, $images_full_path, $invoice_path = null);
 
             if ($customer_email != "copymaxinc@gmail.com") {
                 $data['to'] = "copymaxinc@gmail.com";
@@ -3750,7 +3750,7 @@ class Index extends MY_Controller
 
                 /* cash mail */
 
-                $this->sendMailContactUs($data, $images_full_path, $invoice_path = null);
+                sendMail($data, $images_full_path, $invoice_path = null);
             }
 
 
@@ -3932,25 +3932,26 @@ class Index extends MY_Controller
 
                 if (count($result) > 0) {
                     $forgotten = $this->ion_auth->forgotten_password($user_email);
+                    
                     //echo count($forgotten)."<br>";
                     //echo $forgotten['forgotten_password_code']."<br>";
                     //echo"<pre>"; print_r($forgotten); exit;
 
                     //$forget_link = base_url()."my-account/reset-password?key=".$forgotten['forgotten_password_code'];
                     $forget_link = base_url() . "my-account/reset-password/" . $forgotten['forgotten_password_code'];
-
-                    $message = "<html>
+                    $safe_link = htmlspecialchars($forget_link, ENT_QUOTES, 'UTF-8');
+                    $message = '<html>
                                     <head>
                                     <title>Forgot Password</title>
                                     </head>
                                     <body>
                                     <p>Hi Dear,</p>
                                     <p>&nbsp;</p>
-                                    <p>Click <a href='$forget_link'>here</a> to reset your account password.</p>
+                                    <p>Click <a href="'.$safe_link.'">here</a> to reset your account password.</p>
                                     <p>&nbsp;</p>
                                     <p>Best Regards,<br/>Copymax Inc. Team</p>
                                     </body>
-                                    </html>";
+                                    </html>';
 
                     $data['to'] = $this->input->post('user_email');
                     //$data['to']='arindam.biswas@met-technologies.com';
@@ -3959,7 +3960,7 @@ class Index extends MY_Controller
                     $data['subject'] = 'Forgot Password';
                     $data['message'] = $message;
 
-                    if ($this->sendMail($data)) {
+                    if (sendMail($data)) {
                         $this->session->set_flashdata('message', 'Please check your email to reset your account password.');
                     } else {
                         $this->session->set_flashdata('message', 'Please try again.');
@@ -4271,7 +4272,7 @@ class Index extends MY_Controller
         // $data['message']=$mail_temp;
         // $data['from']='punjabmotorworkshop@gmail.com';				
 
-        // if($this->sendMail($data)){
+        // if(sendMail($data)){
         // 	echo 'success';
         // }
         // else{
@@ -4309,12 +4310,12 @@ class Index extends MY_Controller
         $config = get_updated_smtp_config();
         $this->email->initialize($config);
         $this->email->set_crlf("\r\n");
+        $this->email->set_newline("\r\n");
         $this->email->from(EMAIL_SMTP_FROM_EMAIL, EMAIL_SMTP_FROM_NAME);
         $this->email->to($data['to']);
         $this->email->subject($data['subject']);
         $this->email->message($data['message']);
 
-        //print_r($image_full_path);die;
         if (!empty($image_full_path)) {
             foreach ($image_full_path as $file) {
                 $this->email->attach(base_url('uploads/files/' . $file));
@@ -4359,52 +4360,4 @@ class Index extends MY_Controller
             return false;
         }
     }
-
-
-
-
-
-    // private function sendMail($data)
-    // {
-
-    //     $config = get_updated_smtp_config();
-    //     $this->email->initialize($config);
-
-    //     $this->email->set_crlf("\r\n");
-
-    //     $this->email->from('info@copymaxinc.com', 'Copymax');
-    //     $this->email->to($data['to']);
-    //     //$this->email->to('amitava.rc25@gmail.com'); 
-
-    //     $this->email->subject($data['subject']);
-    //     $this->email->message($data['message']);
-
-    //     if ($this->email->send()) {
-
-    //         return true;
-    //     } else {
-    //         //return false;
-    //         print_r($this->email->print_debugger());die;
-    //     }
-    // }
-
-
-    // public function update_password(){ 
-    //     if($this->input->post('new_password') == $this->input->post('confirm_password')){
-    //      $post_data = $this->input->post();
-    //   if(!empty($post_data)){
-    //    $res = $this->ion_auth->change_password($post_data);
-    //    if($res==1){
-    //     $this->session->set_flashdata('success', $this->lang->line('password_update'));
-    //    }else{
-    //     $this->session->set_flashdata('error', $this->lang->line('password_mismatch'));
-    //    }
-    //    redirect(base_url(get_current_language().'/my-account')); 
-    //   }
-    //     }else{
-    //      $this->session->set_flashdata('error', $this->lang->line('password_mismatch'));
-    //      redirect(base_url(get_current_language().'/my-account')); 
-    //     }
-    // }
-
 }
