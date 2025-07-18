@@ -3940,6 +3940,7 @@ class Index extends MY_Controller
                     //$forget_link = base_url()."my-account/reset-password?key=".$forgotten['forgotten_password_code'];
                     $forget_link = base_url() . "my-account/reset-password/" . $forgotten['forgotten_password_code'];
                     $safe_link = htmlspecialchars($forget_link, ENT_QUOTES, 'UTF-8');
+                    // $safe_link = '';
                     $message = '<html>
                                     <head>
                                     <title>Forgot Password</title>

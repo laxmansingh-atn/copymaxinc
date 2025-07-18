@@ -1469,6 +1469,7 @@ class Cart extends MY_Controller
 		}else{
 			$cart_total = $this->cart->total() + $extra_data['total'];
 		}
+		
 		//echo $cart_total;die;
 		$data['cart_content']   = $this->cart->contents();
 
@@ -1480,9 +1481,12 @@ class Cart extends MY_Controller
 		} else {
 			//if (!empty($data['cart_content'])) {
 				$temp = 0;
-				
+				error_reporting(-1);
+		ini_set('display_errors', 1);
 					//echo '<pre>'; print_r($cart_content); die();
 					$services = \Ups\Entity\Service::getServices();
+							dd('sss');
+
 					$services=array(
 						'01' => 'UPS Next Day Air',
 						'02' => 'UPS Second Day Air',

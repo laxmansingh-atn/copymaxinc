@@ -8,7 +8,10 @@ if (!function_exists('sendMail')) {
 	function sendMail($data, $image_full_path = null, $invoice_path = null) {
 		$mail = new PHPMailer(true);
 		try {
-			$mail->isSMTP();
+            error_reporting(-1);
+		    ini_set('display_errors', 1);
+			
+            $mail->isSMTP();
 			$mail->Host       = EMAIL_SMTP_HOST;
 			$mail->SMTPAuth   = EMAIL_SMTP_VALIDATION;
 			$mail->Username   = EMAIL_SMTP_USER;
@@ -18,13 +21,13 @@ if (!function_exists('sendMail')) {
 			$mail->setFrom(EMAIL_SMTP_FROM_EMAIL, EMAIL_SMTP_FROM_NAME);
 
             //For Testing Purpose only
-            $mail->Host       = 'smtp.gmail.com';
-            $mail->SMTPAuth   = true;
-            $mail->Username   = 'laxmansingh.atn@gmail.com';
-            $mail->Password   = 'krtfuzadtpefgvaa';          // Your Gmail App Password
-            $mail->SMTPSecure = 'tls';
-            $mail->Port       = 587;
-			$mail->setFrom('laxmansingh.atn@gmail.com', EMAIL_SMTP_FROM_NAME);
+            // $mail->Host       = 'smtp.gmail.com';
+            // $mail->SMTPAuth   = true;
+            // $mail->Username   = 'laxmansingh.atn@gmail.com';
+            // $mail->Password   = 'krtfuzadtpefgvaa';          // Your Gmail App Password
+            // $mail->SMTPSecure = 'tls';
+            // $mail->Port       = 587;
+			// $mail->setFrom('laxmansingh.atn@gmail.com', EMAIL_SMTP_FROM_NAME);
 
 			// Main recipient
 			$mail->addAddress($data['to']);
@@ -79,12 +82,13 @@ if (!function_exists('sendMail')) {
 					$mail->addAttachment($invoice_path);
 				}
 			}
-
-            // Enable verbose debug output (0 = off, 2 = full)
-            // $mail->SMTPDebug = 2; // or use 3 for even more detailed logs
-            // $mail->Debugoutput = function($str, $level) {
-            //     echo "Debug level $level; message: $str<br>";
-            // };
+            if(isset($_GET['email_test'])){
+                // Enable verbose debug output (0 = off, 2 = full)
+                $mail->SMTPDebug = 3; // or use 3 for even more detailed logs
+                $mail->Debugoutput = function($str, $level) {
+                    echo "Debug level $level; message: $str<br>";
+                };
+            }
 
 			return $mail->send();
 
